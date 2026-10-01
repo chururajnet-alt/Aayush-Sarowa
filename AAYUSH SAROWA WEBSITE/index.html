@@ -1,0 +1,786 @@
+<!DOCTYPE html>
+<html class="dark" lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>Aayush Sarowa — Systems &amp; Architecture</title>
+  <meta name="description" content="Portfolio of Aayush Sarowa, 12-year-old software engineer and systems architect from PM Shri Kendriya Vidyalaya Churu. Creator of NovaChess 3.8 Pro and Super Tracker."/>
+  
+  <!-- Favicon / Brand Logo -->
+  <link rel="icon" type="image/png" href="assets/logo.png"/>
+  <link rel="apple-touch-icon" href="assets/logo.png"/>
+
+  <!-- Tailwind CDN & Theme Config -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            "on-secondary-fixed": "#001f26",
+            "surface-container": "#1c1f29",
+            "tertiary-container": "#4d8eff",
+            "secondary-fixed-dim": "#4cd7f6",
+            "surface-variant": "#31353f",
+            "on-tertiary-container": "#00285d",
+            "primary-fixed-dim": "#d0bcff",
+            "inverse-surface": "#dfe2ef",
+            "on-tertiary": "#002e6a",
+            "on-secondary": "#003640",
+            "on-error-container": "#ffdad6",
+            "on-primary-fixed": "#23005c",
+            "on-primary-fixed-variant": "#5516be",
+            "on-tertiary-fixed": "#001a42",
+            "primary-fixed": "#e9ddff",
+            "outline": "#958ea0",
+            "surface-dim": "#0f131c",
+            "surface-container-highest": "#31353f",
+            "surface-bright": "#353943",
+            "outline-variant": "#494454",
+            "secondary-fixed": "#acedff",
+            "on-tertiary-fixed-variant": "#004395",
+            "surface-container-low": "#181b25",
+            "surface-container-lowest": "#0a0e17",
+            "tertiary-fixed": "#d8e2ff",
+            "surface-container-high": "#262a34",
+            "secondary": "#4cd7f6",
+            "primary-container": "#a078ff",
+            "error-container": "#93000a",
+            "surface": "#0f131c",
+            "tertiary": "#adc6ff",
+            "on-primary-container": "#340080",
+            "inverse-on-surface": "#2c303a",
+            "secondary-container": "#03b5d3",
+            "on-primary": "#3c0091",
+            "tertiary-fixed-dim": "#adc6ff",
+            "error": "#ffb4ab",
+            "on-background": "#dfe2ef",
+            "on-error": "#690005",
+            "primary": "#d0bcff",
+            "surface-tint": "#d0bcff",
+            "inverse-primary": "#6d3bd7",
+            "on-secondary-fixed-variant": "#004e5c",
+            "on-surface-variant": "#cbc3d7",
+            "background": "#0f131c",
+            "on-surface": "#dfe2ef",
+            "on-secondary-container": "#00424e"
+          },
+          borderRadius: {
+            "DEFAULT": "0.25rem",
+            "lg": "0.5rem",
+            "xl": "0.75rem",
+            "full": "9999px"
+          },
+          spacing: {
+            "gutter-lg": "2.5rem",
+            "margin": "1rem",
+            "margin-lg": "4rem",
+            "margin-md": "2.5rem",
+            "space-sm": "0.5rem",
+            "space-lg": "1.5rem",
+            "gutter": "1.5rem",
+            "space-xl": "2.5rem",
+            "space-3xl": "6rem",
+            "space-2xl": "4rem",
+            "space-md": "1rem",
+            "space-xs": "0.25rem"
+          },
+          fontFamily: {
+            "display-hero": ["Plus Jakarta Sans", "sans-serif"],
+            "headline-lg": ["Plus Jakarta Sans", "sans-serif"],
+            "display-hero-mobile": ["Plus Jakarta Sans", "sans-serif"],
+            "body-lg": ["Inter", "sans-serif"],
+            "headline-lg-mobile": ["Plus Jakarta Sans", "sans-serif"],
+            "label-tech": ["JetBrains Mono", "monospace"],
+            "headline-md": ["Plus Jakarta Sans", "sans-serif"],
+            "headline-sm": ["Plus Jakarta Sans", "sans-serif"],
+            "body-sm": ["Inter", "sans-serif"],
+            "label-code-sm": ["JetBrains Mono", "monospace"],
+            "body-md": ["Inter", "sans-serif"]
+          },
+          fontSize: {
+            "display-hero": ["4.5rem", { lineHeight: "1.05", letterSpacing: "-0.04em", fontWeight: "800" }],
+            "headline-lg": ["3rem", { lineHeight: "1.15", letterSpacing: "-0.03em", fontWeight: "700" }],
+            "display-hero-mobile": ["2.75rem", { lineHeight: "1.1", letterSpacing: "-0.03em", fontWeight: "800" }],
+            "body-lg": ["1.125rem", { lineHeight: "1.6", letterSpacing: "-0.01em", fontWeight: "400" }],
+            "headline-lg-mobile": ["2rem", { lineHeight: "1.2", letterSpacing: "-0.02em", fontWeight: "700" }],
+            "label-tech": ["0.8125rem", { lineHeight: "1.4", letterSpacing: "0.04em", fontWeight: "500" }],
+            "headline-md": ["2rem", { lineHeight: "1.25", letterSpacing: "-0.02em", fontWeight: "600" }],
+            "headline-sm": ["1.375rem", { lineHeight: "1.35", letterSpacing: "-0.01em", fontWeight: "600" }],
+            "body-sm": ["0.875rem", { lineHeight: "1.5", letterSpacing: "0em", fontWeight: "400" }],
+            "label-code-sm": ["0.75rem", { lineHeight: "1.3", letterSpacing: "0.06em", fontWeight: "500" }],
+            "body-md": ["1rem", { lineHeight: "1.55", letterSpacing: "0em", fontWeight: "400" }]
+          }
+        }
+      }
+    };
+  </script>
+
+  <!-- Custom Stylesheet -->
+  <link rel="stylesheet" href="css/style.css"/>
+  <script src="js/main.js" defer></script>
+</head>
+
+<body class="bg-surface font-body-md text-on-surface antialiased selection:bg-primary selection:text-on-primary min-h-screen flex flex-col justify-between">
+
+  <!-- GLOBAL FIXED HEADER -->
+  <header class="fixed top-0 left-0 right-0 z-50 bg-surface-container-lowest/80 backdrop-blur-xl border-b border-outline-variant/30 shadow-[0_1px_8px_rgba(0,0,0,0.04)]">
+    <div class="h-20 max-w-[80rem] mx-auto px-margin md:px-margin-md lg:px-margin-lg flex items-center justify-between">
+      
+      <!-- Brand Anchor -->
+      <div class="flex items-center gap-space-md">
+        <a class="flex items-center gap-space-sm group transition-transform hover:scale-[1.02]" href="index.html">
+          <img src="assets/logo.png" alt="Aayush Sarowa Logo" class="h-9 w-9 object-contain transition-transform duration-300 group-hover:rotate-6 drop-shadow-[0_0_15px_rgba(139,92,246,0.6)]"/>
+          <div class="flex flex-col">
+            <span class="font-headline-sm text-headline-sm text-on-surface font-bold tracking-tight leading-none group-hover:text-primary transition-colors">Aayush Sarowa</span>
+            <span class="font-label-code-sm text-label-code-sm text-secondary tracking-widest uppercase mt-space-xs">Systems &amp; Architecture</span>
+          </div>
+        </a>
+      </div>
+
+      <!-- Desktop Nav -->
+      <nav class="hidden lg:flex items-center gap-space-xs bg-surface-container-lowest/70 border border-outline-variant/30 p-1.5 rounded-xl shadow-inner">
+        <a aria-current="page" class="nav-cyber-link px-space-md py-space-sm transition-all bg-surface-container-high text-primary font-semibold rounded-lg shadow-[0_0_20px_-4px_rgba(139,92,246,0.35)]" href="index.html">Home</a>
+        <a class="nav-cyber-link px-space-md py-space-sm text-on-surface-variant font-body-sm text-body-sm hover:text-on-surface hover:bg-surface-container-high transition-all rounded-lg" href="about.html">About</a>
+        <a class="nav-cyber-link px-space-md py-space-sm text-on-surface-variant font-body-sm text-body-sm hover:text-on-surface hover:bg-surface-container-high transition-all rounded-lg" href="skills.html">Skills</a>
+        <a class="nav-cyber-link px-space-md py-space-sm text-on-surface-variant font-body-sm text-body-sm hover:text-on-surface hover:bg-surface-container-high transition-all rounded-lg" href="projects.html">Projects</a>
+        <a class="nav-cyber-link px-space-md py-space-sm text-on-surface-variant font-body-sm text-body-sm hover:text-on-surface hover:bg-surface-container-high transition-all rounded-lg" href="develop.html">dEVELoPE Club</a>
+        <a class="nav-cyber-link px-space-md py-space-sm text-on-surface-variant font-body-sm text-body-sm hover:text-on-surface hover:bg-surface-container-high transition-all rounded-lg" href="develop-registration.html">Join dEVELoPE</a>
+        <a class="nav-cyber-link px-space-md py-space-sm text-on-surface-variant font-body-sm text-body-sm hover:text-on-surface hover:bg-surface-container-high transition-all rounded-lg" href="hobbies.html">Hobbies</a>
+        <a class="nav-cyber-link px-space-md py-space-sm text-on-surface-variant font-body-sm text-body-sm hover:text-on-surface hover:bg-surface-container-high transition-all rounded-lg" href="contact.html">Contact</a>
+      </nav>
+
+      <!-- Action & Profile Badge -->
+      <div class="flex items-center gap-space-md">
+        <a class="btn-cyber-interactive hidden sm:inline-flex items-center gap-space-xs px-space-lg py-2.5 rounded-lg bg-primary-container/20 text-on-surface border border-primary/30 font-headline-sm text-body-sm font-semibold shadow-[0_0_20px_-4px_rgba(139,92,246,0.4)] hover:bg-primary-container/35 hover:shadow-[0_0_30px_0px_rgba(6,182,212,0.5)] hover:-translate-y-0.5 transition-all" href="develop-registration.html">
+          <span class="w-2 h-2 rounded-full bg-secondary animate-pulse"></span>
+          Join dEVELoPE
+        </a>
+        <a href="about.html" class="w-9 h-9 rounded-full overflow-hidden border border-primary/40 bg-surface-container-high flex items-center justify-center shadow-[0_0_12px_rgba(208,188,255,0.4)] hover:scale-105 transition-transform" title="About Aayush">
+          <img src="assets/aayush.jpg" alt="Aayush Sarowa" class="w-full h-full object-cover object-top"/>
+        </a>
+        
+        <!-- Mobile Menu Toggle Button -->
+        <button id="mobileMenuBtn" aria-label="Toggle Navigation Menu" class="lg:hidden p-2 rounded-lg bg-surface-container-high text-on-surface hover:text-primary transition-colors">
+          <span class="material-symbols-outlined text-[24px]">menu</span>
+        </button>
+      </div>
+
+    </div>
+
+    <!-- Mobile Slide-Down Menu Drawer -->
+    <div id="mobileMenu" class="hidden lg:hidden fixed inset-0 z-50 bg-[#0a0e17] p-6 flex flex-col justify-between overflow-y-auto">
+      <div>
+        <div class="flex items-center justify-between pb-6 border-b border-outline-variant/30">
+          <div class="flex items-center gap-3">
+            <img src="assets/logo.png" alt="Aayush Sarowa Logo" class="w-10 h-10 object-contain drop-shadow-[0_0_12px_rgba(139,92,246,0.6)]"/>
+            <div>
+              <div class="font-headline-sm text-on-surface font-bold">Aayush Sarowa</div>
+              <div class="font-label-code-sm text-xs text-secondary">Systems &amp; Architecture</div>
+            </div>
+          </div>
+          <button id="mobileMenuClose" aria-label="Close Navigation" class="p-2 rounded-lg bg-surface-container text-on-surface">
+            <span class="material-symbols-outlined text-[24px]">close</span>
+          </button>
+        </div>
+        <nav class="flex flex-col gap-2 mt-6">
+          <a class="px-4 py-3 rounded-lg bg-surface-container-high text-primary font-semibold text-lg flex items-center justify-between" href="index.html">
+            <span>Home</span>
+            <span class="material-symbols-outlined text-sm">arrow_forward</span>
+          </a>
+          <a class="px-4 py-3 rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface font-medium text-lg flex items-center justify-between" href="about.html">
+            <span>About</span>
+            <span class="material-symbols-outlined text-sm">arrow_forward</span>
+          </a>
+          <a class="px-4 py-3 rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface font-medium text-lg flex items-center justify-between" href="skills.html">
+            <span>Skills</span>
+            <span class="material-symbols-outlined text-sm">arrow_forward</span>
+          </a>
+          <a class="px-4 py-3 rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface font-medium text-lg flex items-center justify-between" href="projects.html">
+            <span>Projects</span>
+            <span class="material-symbols-outlined text-sm">arrow_forward</span>
+          </a>
+          <a class="px-4 py-3 rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface font-medium text-lg flex items-center justify-between" href="develop.html">
+            <span>dEVELoPE Club</span>
+            <span class="material-symbols-outlined text-sm">arrow_forward</span>
+          </a>
+          <a class="px-4 py-3 rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface font-medium text-lg flex items-center justify-between" href="develop-registration.html">
+            <span>Join dEVELoPE (5-Digit Pass)</span>
+            <span class="material-symbols-outlined text-sm">arrow_forward</span>
+          </a>
+          <a class="px-4 py-3 rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface font-medium text-lg flex items-center justify-between" href="hobbies.html">
+            <span>Hobbies</span>
+            <span class="material-symbols-outlined text-sm">arrow_forward</span>
+          </a>
+          <a class="px-4 py-3 rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface font-medium text-lg flex items-center justify-between" href="contact.html">
+            <span>Contact</span>
+            <span class="material-symbols-outlined text-sm">arrow_forward</span>
+          </a>
+        </nav>
+      </div>
+      <div class="pt-6 border-t border-outline-variant/30 flex flex-col gap-3">
+        <a class="btn-cyber-interactive w-full text-center py-3.5 rounded-xl bg-primary-container text-on-surface font-headline-sm font-semibold flex items-center justify-center gap-2" href="develop-registration.html">
+          <span class="w-2 h-2 rounded-full bg-secondary animate-pulse"></span>
+          Join dEVELoPE
+        </a>
+        <div class="text-center font-label-code-sm text-xs text-outline">
+          PM Shri KV Churu • Class 7th • Age 12
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- MAIN CONTENT AREA -->
+  <main class="w-full pt-20 bg-surface flex-1">
+    <div class="flex flex-col w-full">
+
+      <!-- Atmospheric Micro-grid Ambient Canvas -->
+      <div class="relative w-full overflow-hidden cyber-grid">
+        
+        <!-- Ambient Radial Glows with subtle mouse follow -->
+        <div class="hero-ambient-glow absolute top-10 left-1/2 -translate-x-1/2 w-[72rem] h-[40rem] bg-gradient-to-tr from-primary-container/20 via-secondary/15 to-transparent blur-[140px] pointer-events-none rounded-full animate-drift-1"></div>
+        <div class="hero-ambient-glow absolute top-[48rem] -left-48 w-96 h-96 bg-primary/20 blur-[130px] pointer-events-none rounded-full animate-drift-2"></div>
+        <div class="hero-ambient-glow absolute top-[80rem] -right-40 w-[32rem] h-[32rem] bg-secondary-container/15 blur-[140px] pointer-events-none rounded-full animate-drift-3"></div>
+
+        <!-- HERO SECTION -->
+        <section class="relative max-w-[80rem] mx-auto px-margin md:px-margin-md lg:px-margin-lg pt-12 lg:pt-16 pb-20">
+          <div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter lg:gap-gutter-lg items-center">
+            
+            <!-- Left: Editorial Headline & Actions -->
+            <div class="lg:col-span-7 flex flex-col items-start z-10 hero-reveal-1">
+              
+              <!-- Availability Pill -->
+              <div class="animate-float-slow inline-flex items-center gap-2.5 px-3.5 py-1.5 rounded-full bg-secondary/10 border border-secondary/30 shadow-[0_0_20px_-4px_rgba(6,182,212,0.35)] backdrop-blur-md mb-6 hover:border-secondary/60 hover:shadow-[0_0_25px_0px_rgba(6,182,212,0.5)] transition-all cursor-default">
+                <span class="relative flex h-2 w-2">
+                  <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-secondary opacity-75"></span>
+                  <span class="relative inline-flex rounded-full h-2 w-2 bg-secondary"></span>
+                </span>
+                <span class="font-label-code-sm text-label-code-sm uppercase tracking-widest text-secondary font-semibold">
+                  Age 12 • Class 7 • PM Shri KV Churu • Creator of NovaChess &amp; Super Tracker
+                </span>
+              </div>
+
+              <!-- Hero Headline -->
+              <h1 class="hero-reveal-2 font-display-hero text-display-hero-mobile lg:text-display-hero text-on-surface tracking-tight mb-6">
+                Building ideas into <br class="hidden sm:inline"/>
+                <span class="bg-gradient-to-r from-primary via-secondary to-primary-fixed bg-clip-text text-transparent drop-shadow-[0_0_35px_rgba(208,188,255,0.35)] animate-pulse-glow">
+                  digital experiences.
+                </span>
+              </h1>
+
+              <!-- Lead Paragraph -->
+              <p class="hero-reveal-3 font-body-lg text-body-lg text-on-surface-variant max-w-2xl mb-8 leading-relaxed">
+                Software engineer, systems architect, and digital product designer crafting robust, scalable applications and immersive interface paradigms at the intersection of performance, distributed resiliency, and mathematical aesthetics.
+              </p>
+
+              <!-- CTAs Hub -->
+              <div class="hero-reveal-3 flex flex-wrap items-center gap-space-md mb-10 w-full sm:w-auto">
+                <a class="btn-cyber-interactive w-full sm:w-auto text-center inline-flex items-center justify-center gap-space-sm px-6 py-3.5 rounded-lg bg-primary-container/20 border border-primary/40 text-on-surface font-headline-sm text-body-sm font-semibold shadow-[0_0_25px_-2px_rgba(160,120,255,0.45)] hover:bg-primary-container/30 hover:border-secondary/60 hover:shadow-[0_0_35px_2px_rgba(76,215,246,0.5)] hover:-translate-y-0.5 transition-all" href="projects.html">
+                  <span class="material-symbols-outlined text-[20px] text-secondary">explore</span>
+                  <span>Explore My Work</span>
+                  <span class="btn-arrow material-symbols-outlined text-[18px]">arrow_forward</span>
+                </a>
+                <a class="btn-cyber-interactive w-full sm:w-auto text-center inline-flex items-center justify-center gap-space-sm px-6 py-3.5 rounded-lg bg-surface-container-high/60 border border-outline-variant/40 text-on-surface-variant hover:text-on-surface hover:bg-surface-container-highest hover:border-outline/60 hover:-translate-y-0.5 transition-all font-body-md text-body-sm font-medium shadow-sm hover:shadow-[0_0_20px_rgba(149,142,160,0.2)]" href="contact.html">
+                  <span class="material-symbols-outlined text-[18px]">terminal</span>
+                  <span>Contact Me</span>
+                </a>
+                <a class="inline-flex items-center gap-1.5 px-3 py-2 text-outline hover:text-primary transition-all font-label-tech text-label-tech hover:translate-x-0.5 group" href="about.html">
+                  <span>Read Engineering Dossier</span>
+                  <span class="material-symbols-outlined text-[16px] group-hover:translate-x-1 transition-transform">arrow_forward</span>
+                </a>
+              </div>
+
+              <!-- Micro Metas -->
+              <div class="flex flex-wrap items-center gap-x-8 gap-y-3 pt-6 w-full text-on-surface-variant/80 border-t border-outline-variant/20">
+                <div class="flex items-center gap-2 group cursor-default">
+                  <span class="font-label-tech text-label-tech text-outline">LATENCY:</span>
+                  <span class="font-label-tech text-label-tech text-secondary font-semibold group-hover:drop-shadow-[0_0_8px_rgba(76,215,246,0.6)] transition-all">12ms global p99</span>
+                </div>
+                <div class="flex items-center gap-2 group cursor-default">
+                  <span class="font-label-tech text-label-tech text-outline">UPTIME:</span>
+                  <span class="font-label-tech text-label-tech text-primary font-semibold group-hover:drop-shadow-[0_0_8px_rgba(208,188,255,0.6)] transition-all">99.992% active</span>
+                </div>
+                <div class="flex items-center gap-2 group cursor-default">
+                  <span class="font-label-tech text-label-tech text-outline">STACK:</span>
+                  <span class="font-label-tech text-label-tech text-on-surface group-hover:text-secondary transition-colors">C++ // Rust // WASM // TS</span>
+                </div>
+              </div>
+
+            </div>
+
+            <!-- Right: Glassmorphic Telemetry Command Console -->
+            <div class="lg:col-span-5 relative mt-6 lg:mt-0 hero-reveal-4">
+              <div class="interactive-card relative rounded-2xl bg-surface-container-low/85 backdrop-blur-2xl p-6 border border-outline-variant/40 shadow-[0_24px_64px_-12px_rgba(0,0,0,0.85)] overflow-hidden">
+                <!-- Neon Accent Top Strip -->
+                <div class="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-primary via-secondary to-primary-container"></div>
+                
+                <!-- Terminal Header Controls -->
+                <div class="flex items-center justify-between pb-4 mb-4 border-b border-outline-variant/20">
+                  <div class="flex items-center gap-2">
+                    <span class="w-3 h-3 rounded-full bg-error/70 inline-block"></span>
+                    <span class="w-3 h-3 rounded-full bg-secondary-container/70 inline-block"></span>
+                    <span class="w-3 h-3 rounded-full bg-secondary/70 inline-block"></span>
+                    <span class="ml-2 font-label-code-sm text-label-code-sm text-outline tracking-wider uppercase">SYNAPTIC ANALYTICS // v4.8</span>
+                  </div>
+                  <span class="animate-float-delayed px-2.5 py-0.5 rounded text-[11px] font-label-code-sm bg-secondary/15 text-secondary border border-secondary/30 shadow-[0_0_12px_rgba(76,215,246,0.3)]">LIVE KERNEL</span>
+                </div>
+
+                <!-- Scanner Reticle with Aayush's Photo -->
+                <div class="scanner-container rounded-xl bg-surface-container-lowest/90 p-4 mb-4 relative overflow-hidden flex flex-col sm:flex-row items-center gap-4 border border-outline-variant/30 hover:border-secondary/40 transition-colors">
+                  <div class="relative w-28 h-28 sm:w-32 sm:h-32 rounded-xl overflow-hidden shadow-lg shrink-0 border-2 border-primary/30 group">
+                    <img alt="Aayush Sarowa - 12-Year-Old Technologist" class="w-full h-full object-cover object-top group-hover:scale-110 transition-transform duration-700" src="assets/aayush.jpg"/>
+                    <!-- Laser Scanner Beam -->
+                    <div class="scanner-beam hidden absolute left-0 right-0 h-1 bg-gradient-to-r from-transparent via-secondary to-transparent shadow-[0_0_12px_#06b6d4] z-20 pointer-events-none"></div>
+                    <div class="absolute inset-0 bg-gradient-to-t from-surface-container-lowest/80 via-transparent to-transparent pointer-events-none"></div>
+                    <span class="absolute bottom-1.5 left-1.5 px-1.5 py-0.5 rounded bg-primary-container text-[10px] font-label-code-sm font-semibold text-on-surface shadow-sm">PRODIGY</span>
+                  </div>
+                  <div class="flex flex-col justify-center text-center sm:text-left">
+                    <div class="flex items-center justify-center sm:justify-start gap-2 mb-1">
+                      <span class="relative flex h-2.5 w-2.5">
+                        <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-secondary opacity-75"></span>
+                        <span class="relative inline-flex rounded-full h-2.5 w-2.5 bg-secondary"></span>
+                      </span>
+                      <span class="font-label-code-sm text-xs text-secondary uppercase tracking-wider font-semibold">Aayush Sarowa</span>
+                    </div>
+                    <h4 class="font-headline-sm text-headline-sm text-on-surface font-bold leading-tight">12-Year-Old Technologist</h4>
+                    <p class="font-body-sm text-body-sm text-outline mt-1">7th Grader @ PM Shri Kendriya Vidyalaya Churu</p>
+                    <div class="flex flex-wrap items-center justify-center sm:justify-start gap-1.5 mt-2.5">
+                      <span class="px-2 py-0.5 rounded bg-surface-container-high border border-outline-variant/30 text-[11px] font-label-code-sm text-primary font-medium">C++20</span>
+                      <span class="px-2 py-0.5 rounded bg-surface-container-high border border-outline-variant/30 text-[11px] font-label-code-sm text-secondary font-medium">WASM</span>
+                      <span class="px-2 py-0.5 rounded bg-surface-container-high border border-outline-variant/30 text-[11px] font-label-code-sm text-on-surface-variant font-medium">React &amp; Go</span>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Mini Telemetry Tele-Cards with Hover Counter Glow -->
+                <div class="grid grid-cols-3 gap-3">
+                  <div class="group bg-surface-container-high/70 p-3 rounded-lg flex flex-col border border-outline-variant/20 hover:border-secondary/40 hover:bg-surface-container-high transition-all">
+                    <span class="font-label-code-sm text-[10px] text-outline uppercase tracking-wider">CPU UTIL</span>
+                    <span class="font-headline-sm text-headline-sm text-on-surface font-bold mt-1 group-hover:text-secondary transition-colors" data-counter="18.4%">18.4<span class="text-secondary text-sm">%</span></span>
+                    <div class="w-full bg-surface-variant h-1 rounded-full mt-2 overflow-hidden">
+                      <div class="bg-secondary h-full rounded-full shadow-[0_0_8px_#06b6d4]" style="width: 18.4%"></div>
+                    </div>
+                  </div>
+
+                  <div class="group bg-surface-container-high/70 p-3 rounded-lg flex flex-col border border-outline-variant/20 hover:border-primary/40 hover:bg-surface-container-high transition-all">
+                    <span class="font-label-code-sm text-[10px] text-outline uppercase tracking-wider">THROUGHPUT</span>
+                    <span class="font-headline-sm text-headline-sm text-primary font-bold mt-1 group-hover:drop-shadow-[0_0_8px_rgba(208,188,255,0.7)] transition-all" data-counter="4.8GB/s">4.8<span class="text-on-surface-variant text-sm">GB/s</span></span>
+                    <div class="w-full bg-surface-variant h-1 rounded-full mt-2 overflow-hidden">
+                      <div class="bg-primary h-full rounded-full shadow-[0_0_8px_#a078ff]" style="width: 82%"></div>
+                    </div>
+                  </div>
+
+                  <div class="group bg-surface-container-high/70 p-3 rounded-lg flex flex-col border border-outline-variant/20 hover:border-secondary/40 hover:bg-surface-container-high transition-all">
+                    <span class="font-label-code-sm text-[10px] text-outline uppercase tracking-wider">P99 LAT</span>
+                    <span class="font-headline-sm text-headline-sm text-secondary-fixed-dim font-bold mt-1 group-hover:drop-shadow-[0_0_8px_rgba(76,215,246,0.7)] transition-all" data-counter="12ms">12<span class="text-on-surface-variant text-sm">ms</span></span>
+                    <div class="w-full bg-surface-variant h-1 rounded-full mt-2 overflow-hidden">
+                      <div class="bg-secondary-fixed-dim h-full rounded-full shadow-[0_0_8px_#4cd7f6]" style="width: 12%"></div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Bottom Terminal Log snippet -->
+                <div class="mt-4 p-3 rounded-lg bg-surface-container-lowest/80 border border-outline-variant/20 font-label-code-sm text-label-code-sm text-on-surface-variant/90 flex items-center justify-between hover:border-secondary/30 transition-colors">
+                  <div class="flex items-center gap-2 truncate">
+                    <span class="text-secondary">$</span>
+                    <span class="text-outline">kernel.wasm:</span>
+                    <span class="text-primary truncate">simd_vectorization::ready (threads: 16)</span>
+                  </div>
+                  <span class="text-secondary font-semibold ml-2 px-1.5 py-0.5 rounded bg-secondary/10 text-[11px]">200_OK</span>
+                </div>
+
+              </div>
+            </div>
+
+          </div>
+        </section>
+
+        <!-- KEY PILLARS / ARCHITECTURAL METRICS RIBBON -->
+        <section class="w-full bg-surface-container-lowest/70 backdrop-blur-md py-8 border-y border-outline-variant/20">
+          <div class="max-w-[80rem] mx-auto px-margin md:px-margin-md lg:px-margin-lg">
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-8">
+              <div class="reveal-on-scroll flex flex-col space-y-1 p-3 rounded-xl hover:bg-surface-container/40 transition-all border border-transparent hover:border-secondary/20" data-delay="100">
+                <span class="font-label-code-sm text-label-code-sm text-secondary tracking-widest uppercase">PILLAR 01</span>
+                <span class="font-headline-sm text-headline-sm text-on-surface font-semibold">Distributed Systems</span>
+                <span class="font-body-sm text-body-sm text-outline">High-throughput microservices, Raft consensus &amp; event pub/sub</span>
+              </div>
+              <div class="reveal-on-scroll flex flex-col space-y-1 p-3 rounded-xl hover:bg-surface-container/40 transition-all border border-transparent hover:border-primary/20" data-delay="150">
+                <span class="font-label-code-sm text-label-code-sm text-primary tracking-widest uppercase">PILLAR 02</span>
+                <span class="font-headline-sm text-headline-sm text-on-surface font-semibold">Engine Optimization</span>
+                <span class="font-body-sm text-body-sm text-outline">Low-latency bitboards, alpha-beta parallel pruning, WASM core</span>
+              </div>
+              <div class="reveal-on-scroll flex flex-col space-y-1 p-3 rounded-xl hover:bg-surface-container/40 transition-all border border-transparent hover:border-secondary/20" data-delay="200">
+                <span class="font-label-code-sm text-label-code-sm text-secondary-fixed-dim tracking-widest uppercase">PILLAR 03</span>
+                <span class="font-headline-sm text-headline-sm text-on-surface font-semibold">Real-Time Telemetry</span>
+                <span class="font-body-sm text-body-sm text-outline">IoT streaming, geofencing pipelines, and spatial compute</span>
+              </div>
+              <div class="reveal-on-scroll flex flex-col space-y-1 p-3 rounded-xl hover:bg-surface-container/40 transition-all border border-transparent hover:border-tertiary-fixed-dim/20" data-delay="250">
+                <span class="font-label-code-sm text-label-code-sm text-tertiary-fixed-dim tracking-widest uppercase">PILLAR 04</span>
+                <span class="font-headline-sm text-headline-sm text-on-surface font-semibold">Precision Design</span>
+                <span class="font-body-sm text-body-sm text-outline">Cybernetic glassmorphic aesthetics engineered with pixel discipline</span>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- FEATURED WORK TEASER (NovaChess 3.8 Pro & Super Tracker) -->
+        <section class="max-w-[80rem] mx-auto px-margin md:px-margin-md lg:px-margin-lg py-20 lg:py-28" id="work">
+          <div class="reveal-on-scroll flex flex-col md:flex-row md:items-end justify-between mb-12 gap-4">
+            <div>
+              <div class="inline-flex items-center gap-2 font-label-code-sm text-label-code-sm text-primary uppercase tracking-widest mb-2">
+                <span class="material-symbols-outlined text-[16px] animate-pulse">terminal</span>
+                <span>FLAGSHIP ARCHITECTURES</span>
+              </div>
+              <h2 class="font-headline-lg text-headline-lg text-on-surface tracking-tight">Featured Engineering Works</h2>
+            </div>
+            <a class="inline-flex items-center gap-2 text-secondary hover:text-secondary-fixed-dim transition-colors font-headline-sm text-body-md font-semibold group" href="projects.html">
+              <span>View All 14 Production Deployments</span>
+              <span class="project-arrow-icon material-symbols-outlined text-[18px]">arrow_forward</span>
+            </a>
+          </div>
+
+          <!-- Bento Grid for Featured Highlights -->
+          <div class="grid grid-cols-1 lg:grid-cols-12 gap-8">
+            
+            <!-- Feature 1: NovaChess 3.8 Pro -->
+            <div class="reveal-on-scroll interactive-card project-card lg:col-span-7 bg-surface-container-low/70 rounded-2xl p-6 lg:p-8 backdrop-blur-xl border border-outline-variant/30 shadow-xl flex flex-col justify-between group hover:border-primary/40 transition-all" data-delay="100">
+              <div>
+                <div class="flex items-center justify-between mb-5">
+                  <div class="flex items-center gap-2">
+                    <span class="px-3 py-1 rounded-full bg-primary/10 text-primary border border-primary/30 font-label-code-sm text-label-code-sm uppercase tracking-wider font-semibold">NEURAL CHESS ENGINE</span>
+                    <span class="px-2.5 py-1 rounded-full bg-surface-container-high border border-outline-variant/30 text-outline font-label-code-sm text-[11px]">C++20 + AVX2</span>
+                  </div>
+                  <span class="font-label-code-sm text-label-code-sm text-primary flex items-center gap-1.5"><span class="w-1.5 h-1.5 rounded-full bg-primary animate-pulse"></span>ACTIVE ELO: 3420</span>
+                </div>
+
+                <div class="w-full h-64 sm:h-80 rounded-xl overflow-hidden mb-6 relative group-hover:shadow-[0_0_30px_rgba(139,92,246,0.3)] transition-all duration-500 bg-surface-container-lowest border border-outline-variant/20">
+                  <img alt="NovaChess 3.8 Pro Engine" class="project-card-image w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" src="assets/gochess-preview.jpg"/>
+                  <div class="absolute inset-0 bg-gradient-to-t from-surface-container-lowest via-transparent to-transparent opacity-80 pointer-events-none"></div>
+                  <div class="animate-float-delayed absolute bottom-4 left-4 right-4 flex items-center justify-between bg-surface-container-lowest/85 backdrop-blur-md p-3 rounded-lg border border-outline-variant/30 shadow-lg">
+                    <div class="flex items-center gap-2">
+                      <span class="w-2 h-2 rounded-full bg-secondary animate-pulse"></span>
+                      <span class="font-label-tech text-label-tech text-on-surface">NovaChess Engine v3.8.4: <strong>Ply 38</strong></span>
+                    </div>
+                    <span class="font-label-code-sm text-[11px] text-primary font-semibold">Eval: +1.48 CP</span>
+                  </div>
+                </div>
+
+                <h3 class="font-headline-md text-headline-md text-on-surface font-bold tracking-tight mb-3 group-hover:text-primary transition-colors">
+                  NovaChess 3.8 Pro — AVX2 Neural Bitboard Engine
+                </h3>
+                <p class="font-body-md text-body-md text-on-surface-variant mb-6 leading-relaxed">
+                  Next-generation chess evaluation engine featuring 64-bit magic bitboards, quantized NNUE positional neural networks, and WebAssembly browser concurrency achieving 7.8M nodes/sec throughput.
+                </p>
+              </div>
+
+              <div class="pt-4 flex flex-wrap items-center justify-between gap-4 border-t border-outline-variant/20 mt-4">
+                <div class="flex items-center gap-2 font-label-code-sm text-label-code-sm text-outline">
+                  <span class="text-secondary font-medium">Depth: 26 plies</span>
+                  <span>//</span>
+                  <span class="text-primary font-medium">Transposition: 256MB LRU</span>
+                </div>
+                <a class="inline-flex items-center gap-1.5 text-primary hover:text-primary-fixed transition-colors font-headline-sm text-body-sm font-semibold group/link" href="projects.html#novachess-pro">
+                  <span>Inspect Architecture</span>
+                  <span class="project-arrow-icon material-symbols-outlined text-[16px] group-hover/link:translate-x-1 group-hover/link:-translate-y-1 transition-transform">arrow_outward</span>
+                </a>
+              </div>
+            </div>
+
+            <!-- Feature 2: Super Tracker -->
+            <div class="reveal-on-scroll interactive-card project-card lg:col-span-5 bg-surface-container-low/70 rounded-2xl p-6 lg:p-8 backdrop-blur-xl border border-outline-variant/30 shadow-xl flex flex-col justify-between group hover:border-secondary/40 transition-all" data-delay="200">
+              <div>
+                <div class="flex items-center justify-between mb-5">
+                  <div class="flex items-center gap-2">
+                    <span class="px-3 py-1 rounded-full bg-secondary/10 text-secondary border border-secondary/30 font-label-code-sm text-label-code-sm uppercase tracking-wider font-semibold">TELEMETRY &amp; IOT</span>
+                    <span class="px-2.5 py-1 rounded-full bg-surface-container-high border border-outline-variant/30 text-outline font-label-code-sm text-[11px]">GO + MQTT</span>
+                  </div>
+                  <span class="font-label-code-sm text-label-code-sm text-secondary flex items-center gap-1.5"><span class="w-1.5 h-1.5 rounded-full bg-secondary animate-pulse"></span>ACTIVE FLEET</span>
+                </div>
+
+                <div class="w-full h-64 sm:h-80 rounded-xl overflow-hidden mb-6 relative group-hover:shadow-[0_0_30px_rgba(6,182,212,0.3)] transition-all duration-500 bg-surface-container-lowest border border-outline-variant/20">
+                  <img alt="Super Tracker GPS Telemetry Console" class="project-card-image w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" src="assets/supertracker-preview.jpg"/>
+                  <div class="absolute inset-0 bg-gradient-to-t from-surface-container-lowest via-transparent to-transparent opacity-80 pointer-events-none"></div>
+                  <div class="animate-float-delayed absolute bottom-4 left-4 right-4 flex items-center justify-between bg-surface-container-lowest/85 backdrop-blur-md p-3 rounded-lg border border-outline-variant/30 shadow-lg">
+                    <div class="flex items-center gap-2">
+                      <span class="w-2 h-2 rounded-full bg-secondary animate-pulse"></span>
+                      <span class="font-label-tech text-label-tech text-on-surface">Fleet Unit #84: <strong>On Route</strong></span>
+                    </div>
+                    <span class="font-label-code-sm text-[11px] text-secondary font-semibold">ETA: 4m 12s</span>
+                  </div>
+                </div>
+
+                <h3 class="font-headline-md text-headline-md text-on-surface font-bold tracking-tight mb-3 group-hover:text-primary transition-colors">
+                  Super Tracker — Spatial Bus &amp; Fleet Telemetry
+                </h3>
+                <p class="font-body-md text-body-md text-on-surface-variant mb-6 leading-relaxed">
+                  Industrial student transit monitor with polygon geofence alarms, dynamic dead-reckoning filters, WebSocket state sync, and sub-50ms message latency across thousands of simultaneous nodes.
+                </p>
+              </div>
+
+              <div class="pt-4 flex flex-wrap items-center justify-between gap-4 border-t border-outline-variant/20 mt-4">
+                <div class="flex items-center gap-2 font-label-code-sm text-label-code-sm text-outline">
+                  <span class="text-secondary font-medium">Spatial GeoJSON</span>
+                  <span>//</span>
+                  <span class="text-on-surface">5,000 req/sec</span>
+                </div>
+                <a class="inline-flex items-center gap-1.5 text-secondary hover:text-secondary-fixed transition-colors font-headline-sm text-body-sm font-semibold group/link" href="projects.html#super-tracker">
+                  <span>View Case Study</span>
+                  <span class="project-arrow-icon material-symbols-outlined text-[16px] group-hover/link:translate-x-1 group-hover/link:-translate-y-1 transition-transform">arrow_outward</span>
+                </a>
+              </div>
+            </div>
+
+          </div>
+        </section>
+
+        <!-- ARCHITECTURAL PHILOSOPHY & PRINCIPLES -->
+        <section class="w-full bg-surface-container-lowest/50 py-20 lg:py-28 relative border-t border-outline-variant/20" id="dossier">
+          <div class="max-w-[80rem] mx-auto px-margin md:px-margin-md lg:px-margin-lg">
+            <div class="reveal-on-scroll max-w-2xl mb-16">
+              <span class="font-label-code-sm text-label-code-sm text-secondary uppercase tracking-widest">ENGINEERING DOSSIER</span>
+              <h2 class="font-headline-lg text-headline-lg text-on-surface font-bold tracking-tight mt-2 mb-4">
+                First Principles of High-Frequency Software
+              </h2>
+              <p class="font-body-lg text-body-lg text-on-surface-variant">
+                True software reliability is not an accident of framework adoption. It is deliberately constructed through mathematical rigor, low-friction UX, and defensive systems design.
+              </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+              <!-- Pillar Card 1 -->
+              <div class="reveal-on-scroll interactive-card bg-surface-container/70 rounded-2xl p-8 backdrop-blur-xl border border-outline-variant/30 shadow-lg flex flex-col justify-between group" data-delay="100">
+                <div>
+                  <div class="w-12 h-12 rounded-xl bg-primary/10 border border-primary/20 flex items-center justify-center text-primary mb-6 group-hover:scale-110 group-hover:shadow-[0_0_20px_rgba(208,188,255,0.4)] transition-all">
+                    <span class="material-symbols-outlined text-[28px]">speed</span>
+                  </div>
+                  <span class="font-label-code-sm text-label-code-sm text-primary uppercase tracking-widest font-semibold">01 // EFFICIENCY</span>
+                  <h3 class="font-headline-sm text-headline-sm text-on-surface font-bold mt-2 mb-3">
+                    Precision &amp; Low Overheads
+                  </h3>
+                  <p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed mb-6">
+                    Zero unnecessary allocations. When millisecond budgets are strictly capped, we favor stack allocations, lock-free ring buffers, contiguous cache lines, and SIMD instruction pipelines over high-overhead abstractions.
+                  </p>
+                </div>
+                <div class="p-3 bg-surface-container-lowest/80 border border-outline-variant/20 rounded-lg font-label-code-sm text-[11px] text-outline flex items-center justify-between">
+                  <span>TARGET BUDGET:</span>
+                  <span class="text-secondary font-mono font-semibold">&lt; 16.6ms (60 FPS)</span>
+                </div>
+              </div>
+
+              <!-- Pillar Card 2 -->
+              <div class="reveal-on-scroll interactive-card bg-surface-container/70 rounded-2xl p-8 backdrop-blur-xl border border-outline-variant/30 shadow-lg flex flex-col justify-between group" data-delay="200">
+                <div>
+                  <div class="w-12 h-12 rounded-xl bg-secondary/10 border border-secondary/20 flex items-center justify-center text-secondary mb-6 group-hover:scale-110 group-hover:shadow-[0_0_20px_rgba(76,215,246,0.4)] transition-all">
+                    <span class="material-symbols-outlined text-[28px]">layers</span>
+                  </div>
+                  <span class="font-label-code-sm text-label-code-sm text-secondary uppercase tracking-widest font-semibold">02 // CLARITY</span>
+                  <h3 class="font-headline-sm text-headline-sm text-on-surface font-bold mt-2 mb-3">
+                    Cybernetic Glass Interfaces
+                  </h3>
+                  <p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed mb-6">
+                    Density without confusion. Complex telemetry and dense control planes rendered with clear typographic hierarchies, refractive visual depth, and immediate contextual feedback.
+                  </p>
+                </div>
+                <div class="p-3 bg-surface-container-lowest/80 border border-outline-variant/20 rounded-lg font-label-code-sm text-[11px] text-outline flex items-center justify-between">
+                  <span>CONTRAST RATIO:</span>
+                  <span class="text-primary font-mono font-semibold">WCAG AAA / 8.2:1</span>
+                </div>
+              </div>
+
+              <!-- Pillar Card 3 -->
+              <div class="reveal-on-scroll interactive-card bg-surface-container/70 rounded-2xl p-8 backdrop-blur-xl border border-outline-variant/30 shadow-lg flex flex-col justify-between group" data-delay="300">
+                <div>
+                  <div class="w-12 h-12 rounded-xl bg-primary-container/20 border border-primary-container/30 flex items-center justify-center text-primary mb-6 group-hover:scale-110 group-hover:shadow-[0_0_20px_rgba(160,120,255,0.4)] transition-all">
+                    <span class="material-symbols-outlined text-[28px]">shield</span>
+                  </div>
+                  <span class="font-label-code-sm text-label-code-sm text-primary-fixed-dim uppercase tracking-widest font-semibold">03 // INTEGRITY</span>
+                  <h3 class="font-headline-sm text-headline-sm text-on-surface font-bold mt-2 mb-3">
+                    Fault Tolerance &amp; Healing
+                  </h3>
+                  <p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed mb-6">
+                    Autonomous failure recovery. Microservices must remain resilient against network partitions, partial splits, and poison-pill payloads through structured circuit breakers and graceful fallbacks.
+                  </p>
+                </div>
+                <div class="p-3 bg-surface-container-lowest/80 border border-outline-variant/20 rounded-lg font-label-code-sm text-[11px] text-outline flex items-center justify-between">
+                  <span>CIRCUIT BREAKER:</span>
+                  <span class="text-secondary font-mono font-semibold">AUTOMATED HALT</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- INTERACTIVE TERMINAL & CORE STACK MATRIX -->
+        <section class="max-w-[80rem] mx-auto px-margin md:px-margin-md lg:px-margin-lg py-20 lg:py-28">
+          <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
+            
+            <!-- Terminal Simulator -->
+            <div class="reveal-on-scroll interactive-card lg:col-span-7 bg-surface-container-lowest rounded-2xl p-6 border border-outline-variant/40 shadow-2xl font-label-tech group" data-delay="100">
+              <div class="flex items-center justify-between pb-4 mb-4 border-b border-outline-variant/20">
+                <div class="flex items-center gap-2">
+                  <span class="w-3 h-3 rounded-full bg-error/70 inline-block"></span>
+                  <span class="w-3 h-3 rounded-full bg-secondary-container/70 inline-block"></span>
+                  <span class="w-3 h-3 rounded-full bg-secondary/70 inline-block"></span>
+                </div>
+                <div class="inline-flex items-center gap-2">
+                  <span class="relative flex h-2 w-2">
+                    <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-secondary opacity-75"></span>
+                    <span class="relative inline-flex rounded-full h-2 w-2 bg-secondary"></span>
+                  </span>
+                  <span class="font-label-code-sm text-label-code-sm uppercase tracking-widest text-secondary font-semibold">
+                    Age 12 • Class 7 • PM Shri KV Churu
+                  </span>
+                </div>
+              </div>
+
+              <div class="space-y-3 text-body-sm font-label-code-sm leading-relaxed overflow-x-auto text-on-surface-variant">
+                <div class="flex items-center gap-2">
+                  <span class="text-secondary font-bold">$</span>
+                  <span class="text-on-surface font-semibold">aayush --version --verbose</span>
+                </div>
+                <p class="text-outline text-[12px] pl-4 border-l-2 border-primary/30">
+                  [OK] Sarowa Core OS v2025.2 (x86_64-musl-linux) <br/>
+                  [OK] Specialization: Distributed Systems, Low-Latency WASM, Cloud Architectures
+                </p>
+                <div class="flex items-center gap-2 pt-2">
+                  <span class="text-secondary font-bold">$</span>
+                  <span class="text-on-surface font-semibold">cat ./sys_capabilities.json</span>
+                </div>
+                <pre class="text-xs bg-surface-container-low/60 border border-outline-variant/30 p-4 rounded-xl text-primary font-label-code-sm leading-5 group-hover:border-secondary/40 transition-colors shadow-inner">{
+  <span class="text-secondary">"languages"</span>: [<span class="text-on-surface">"Rust"</span>, <span class="text-on-surface">"C++20"</span>, <span class="text-on-surface">"Go"</span>, <span class="text-on-surface">"TypeScript"</span>, <span class="text-on-surface">"WASM"</span>],
+  <span class="text-secondary">"distributed_infra"</span>: [<span class="text-on-surface">"Docker"</span>, <span class="text-on-surface">"Kubernetes"</span>, <span class="text-on-surface">"Kafka"</span>, <span class="text-on-surface">"PostgreSQL"</span>],
+  <span class="text-secondary">"performance_metrics"</span>: {
+    <span class="text-secondary">"avg_test_coverage"</span>: <span class="text-primary-fixed-dim">"96.4%"</span>,
+    <span class="text-secondary">"zero_downtime_deployments"</span>: <span class="text-secondary">true</span>
+  }
+}</pre>
+                <div class="flex items-center gap-2 pt-2 text-secondary">
+                  <span class="font-bold">$</span>
+                  <span class="text-on-surface font-semibold">curl -X POST https://api.sarowa.dev/v1/ping</span>
+                  <span class="inline-block w-2.5 h-4 bg-secondary animate-terminal-cursor ml-0.5"></span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Core Stack Matrix -->
+            <div class="reveal-on-scroll lg:col-span-5 flex flex-col justify-center" data-delay="200">
+              <span class="font-label-code-sm text-label-code-sm text-primary uppercase tracking-widest font-semibold mb-2">TELEMETRIC ARSENAL</span>
+              <h2 class="font-headline-lg text-headline-lg text-on-surface font-bold tracking-tight mb-6">
+                Production-Grade Tooling &amp; Stack
+              </h2>
+              <p class="font-body-md text-body-md text-on-surface-variant mb-8 leading-relaxed">
+                I select tools based on computational boundaries, memory access patterns, and deterministic performance guarantees.
+              </p>
+
+              <div class="space-y-4">
+                <!-- Tool Item 1 -->
+                <div class="p-4 rounded-xl bg-surface-container/60 border border-outline-variant/30 hover:bg-surface-container hover:border-secondary/50 hover:translate-x-1.5 transition-all flex items-center justify-between group cursor-default shadow-sm hover:shadow-[0_0_20px_rgba(76,215,246,0.2)]">
+                  <div class="flex items-center gap-3">
+                    <span class="material-symbols-outlined text-secondary text-[24px] group-hover:scale-110 transition-transform">terminal</span>
+                    <div>
+                      <h4 class="font-headline-sm text-body-md text-on-surface font-bold group-hover:text-secondary transition-colors">C++ &amp; WebAssembly</h4>
+                      <span class="font-body-sm text-body-sm text-outline">Deterministic speed, SIMD, and near-metal performance</span>
+                    </div>
+                  </div>
+                  <span class="font-label-code-sm text-[12px] text-secondary bg-secondary/10 border border-secondary/30 px-2.5 py-1 rounded font-semibold">MASTER</span>
+                </div>
+
+                <!-- Tool Item 2 -->
+                <div class="p-4 rounded-xl bg-surface-container/60 border border-outline-variant/30 hover:bg-surface-container hover:border-primary/50 hover:translate-x-1.5 transition-all flex items-center justify-between group cursor-default shadow-sm hover:shadow-[0_0_20px_rgba(160,120,255,0.2)]">
+                  <div class="flex items-center gap-3">
+                    <span class="material-symbols-outlined text-primary text-[24px] group-hover:scale-110 transition-transform">cloud_sync</span>
+                    <div>
+                      <h4 class="font-headline-sm text-body-md text-on-surface font-bold group-hover:text-primary transition-colors">Go &amp; Distributed Services</h4>
+                      <span class="font-body-sm text-body-sm text-outline">Concurrency routines, microservices, gRPC &amp; MQTT</span>
+                    </div>
+                  </div>
+                  <span class="font-label-code-sm text-[12px] text-primary bg-primary/10 border border-primary/30 px-2.5 py-1 rounded font-semibold">CORE</span>
+                </div>
+
+                <!-- Tool Item 3 -->
+                <div class="p-4 rounded-xl bg-surface-container/60 border border-outline-variant/30 hover:bg-surface-container hover:border-secondary-fixed-dim/50 hover:translate-x-1.5 transition-all flex items-center justify-between group cursor-default shadow-sm hover:shadow-[0_0_20px_rgba(76,215,246,0.2)]">
+                  <div class="flex items-center gap-3">
+                    <span class="material-symbols-outlined text-secondary-fixed-dim text-[24px] group-hover:scale-110 transition-transform">web</span>
+                    <div>
+                      <h4 class="font-headline-sm text-body-md text-on-surface font-bold group-hover:text-secondary-fixed-dim transition-colors">TypeScript, React &amp; Tailwind</h4>
+                      <span class="font-body-sm text-body-sm text-outline">Strictly typed frontend systems with glassmorphic craft</span>
+                    </div>
+                  </div>
+                  <span class="font-label-code-sm text-[12px] text-secondary-fixed-dim bg-secondary/10 border border-secondary/30 px-2.5 py-1 rounded font-semibold">ADVANCED</span>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </section>
+
+        <!-- INITIATE COLLABORATION CTA CALLOUT BANNER -->
+        <section class="max-w-[80rem] mx-auto px-margin md:px-margin-md lg:px-margin-lg pb-16">
+          <div class="reveal-on-scroll interactive-card relative rounded-3xl bg-gradient-to-r from-surface-container-high via-surface-container to-surface-container-low p-8 md:p-14 overflow-hidden border border-outline-variant/40 shadow-2xl">
+            <div class="hero-ambient-glow absolute -right-20 -bottom-20 w-80 h-80 bg-primary/20 rounded-full blur-[90px] pointer-events-none animate-drift-2"></div>
+            <div class="hero-ambient-glow absolute -left-20 -top-20 w-80 h-80 bg-secondary/15 rounded-full blur-[90px] pointer-events-none animate-drift-1"></div>
+            <div class="relative z-10 max-w-3xl flex flex-col items-start">
+              <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/10 border border-primary/30 text-primary font-label-code-sm text-label-code-sm uppercase tracking-wider mb-4 font-semibold shadow-sm">
+                <span class="w-1.5 h-1.5 rounded-full bg-secondary animate-pulse"></span>
+                NEXT-GENERATION SYNAPSE
+              </div>
+              <h2 class="font-headline-lg text-headline-lg-mobile md:text-headline-lg text-on-surface font-bold tracking-tight mb-4">
+                Initiate Next-Generation Collaboration
+              </h2>
+              <p class="font-body-lg text-body-lg text-on-surface-variant mb-8 leading-relaxed">
+                Whether you are designing a high-throughput computational pipeline, crafting an AI evaluation engine, or architecting a flagship digital product — let's build software that redefines expectations.
+              </p>
+              <div class="flex flex-wrap items-center gap-space-md w-full sm:w-auto">
+                <a class="btn-cyber-interactive w-full sm:w-auto text-center inline-flex items-center justify-center gap-2 px-8 py-4 rounded-xl bg-primary-container text-on-surface font-headline-sm text-body-md font-bold shadow-[0_0_30px_-4px_rgba(160,120,255,0.6)] hover:bg-primary hover:text-on-primary hover:shadow-[0_0_40px_2px_rgba(76,215,246,0.6)] hover:-translate-y-0.5 transition-all" href="contact.html">
+                  <span class="material-symbols-outlined text-[20px]">send</span>
+                  <span>Deploy a Message</span>
+                  <span class="btn-arrow material-symbols-outlined text-[18px]">arrow_forward</span>
+                </a>
+                <a class="btn-cyber-interactive w-full sm:w-auto text-center inline-flex items-center justify-center gap-2 px-8 py-4 rounded-xl bg-surface-container-highest/60 border border-outline-variant/40 hover:bg-surface-container-highest text-on-surface font-body-md text-body-md font-semibold hover:-translate-y-0.5 transition-all shadow-sm hover:shadow-[0_0_20px_rgba(149,142,160,0.25)]" href="about.html">
+                  <span class="material-symbols-outlined text-[20px]">description</span>
+                  <span>Read Full Dossier &amp; CV</span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </section>
+
+      </div>
+    </div>
+  </main>
+
+  <!-- GLOBAL FOOTER -->
+  <footer class="w-full bg-surface-container-lowest border-t border-outline-variant/20 shadow-[0_1px_8px_rgba(0,0,0,0.04)] py-space-2xl mt-space-3xl">
+    <div class="max-w-[80rem] mx-auto px-margin md:px-margin-md lg:px-margin-lg">
+      <div class="flex flex-col md:flex-row items-start md:items-center justify-between gap-space-lg pb-space-xl">
+        <div class="flex items-center gap-space-md">
+          <img src="assets/logo.png" alt="Aayush Sarowa Logo" class="h-7 w-7 object-contain drop-shadow-[0_0_10px_rgba(139,92,246,0.5)]"/>
+          <span class="flex h-3 w-3 relative">
+            <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-secondary opacity-75"></span>
+            <span class="relative inline-flex rounded-full h-3 w-3 bg-secondary"></span>
+          </span>
+          <span class="font-label-tech text-label-tech text-on-surface-variant">
+            All Systems Operational <span class="text-outline">//</span> Available for select roles &amp; collaborations
+          </span>
+        </div>
+        <div class="flex items-center gap-space-lg">
+          <a class="font-label-tech text-label-tech text-on-surface-variant hover:text-secondary transition-colors" href="https://github.com" rel="noreferrer" target="_blank">GitHub</a>
+          <a class="font-label-tech text-label-tech text-on-surface-variant hover:text-secondary transition-colors" href="https://linkedin.com" rel="noreferrer" target="_blank">LinkedIn</a>
+          <a class="font-label-tech text-label-tech text-on-surface-variant hover:text-secondary transition-colors" href="https://x.com" rel="noreferrer" target="_blank">X / Twitter</a>
+          <a class="font-label-tech text-label-tech text-on-surface-variant hover:text-secondary transition-colors" href="https://read.cv" rel="noreferrer" target="_blank">Read.cv</a>
+        </div>
+      </div>
+      <div class="pt-space-lg flex flex-col sm:flex-row items-center justify-between gap-space-md border-t border-outline-variant/10">
+        <p class="font-body-sm text-body-sm text-outline">
+          © 2025 Aayush Sarowa. Engineered with mathematical precision &amp; cybernetic clarity.
+        </p>
+        <div class="flex items-center gap-space-xs font-label-code-sm text-label-code-sm text-outline">
+          <span class="text-primary font-semibold">LOC:</span> 28.6139° N, 77.2090° E <span class="text-outline">//</span> <span class="text-secondary font-semibold">REV:</span> 4.8.2-PROD
+        </div>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>

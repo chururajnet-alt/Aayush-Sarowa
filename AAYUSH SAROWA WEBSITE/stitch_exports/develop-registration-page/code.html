@@ -1,0 +1,679 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_standard" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=JetBrains+Mono:wght@400;500;600;700&amp;family=Plus+Jakarta+Sans:wght@600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{colors:{"surface-container-low":"#181b25","outline-variant":"#494454","secondary":"#4cd7f6","on-secondary-fixed-variant":"#004e5c","surface-container-lowest":"#0a0e17","on-error-container":"#ffdad6","error":"#ffb4ab","secondary-fixed":"#acedff","tertiary-fixed":"#d8e2ff","on-primary-container":"#340080","on-surface":"#dfe2ef","surface-dim":"#0f131c","on-tertiary-container":"#00285d","primary-fixed":"#e9ddff","on-primary-fixed":"#23005c","primary-container":"#a078ff","on-error":"#690005","on-tertiary-fixed-variant":"#004395","outline":"#958ea0","on-tertiary":"#002e6a","tertiary":"#adc6ff","on-secondary":"#003640","surface-bright":"#353943","primary-fixed-dim":"#d0bcff","on-background":"#dfe2ef","surface":"#0f131c","on-tertiary-fixed":"#001a42","surface-variant":"#31353f","on-primary":"#3c0091","inverse-primary":"#6d3bd7","tertiary-fixed-dim":"#adc6ff","surface-tint":"#d0bcff","surface-container":"#1c1f29","secondary-container":"#03b5d3","inverse-surface":"#dfe2ef","tertiary-container":"#4d8eff","on-secondary-container":"#00424e","error-container":"#93000a","primary":"#d0bcff","inverse-on-surface":"#2c303a","background":"#0f131c","surface-container-highest":"#31353f","on-secondary-fixed":"#001f26","surface-container-high":"#262a34","on-primary-fixed-variant":"#5516be","secondary-fixed-dim":"#4cd7f6","on-surface-variant":"#cbc3d7"},borderRadius:{"DEFAULT":"0.25rem","lg":"0.5rem","xl":"0.75rem","full":"9999px"},spacing:{"gutter-lg":"2.5rem","space-md":"1rem","space-3xl":"6rem","space-lg":"1.5rem","margin-lg":"4rem","space-sm":"0.5rem","space-xl":"2.5rem","space-xs":"0.25rem","gutter":"1.5rem","margin":"1rem","margin-md":"2.5rem","space-2xl":"4rem"},fontFamily:{"display-hero":["Plus Jakarta Sans"],"headline-lg-mobile":["Plus Jakarta Sans"],"display-hero-mobile":["Plus Jakarta Sans"],"body-md":["Inter"],"headline-sm":["Plus Jakarta Sans"],"label-code-sm":["JetBrains Mono"],"body-lg":["Inter"],"body-sm":["Inter"],"label-tech":["JetBrains Mono"],"headline-md":["Plus Jakarta Sans"],"headline-lg":["Plus Jakarta Sans"]},fontSize:{"display-hero":["4.5rem",{lineHeight:"1.05",letterSpacing:"-0.04em",fontWeight:"800"}],"headline-lg-mobile":["2rem",{lineHeight:"1.2",letterSpacing:"-0.02em",fontWeight:"700"}],"display-hero-mobile":["2.75rem",{lineHeight:"1.1",letterSpacing:"-0.03em",fontWeight:"800"}],"body-md":["1rem",{lineHeight:"1.55",letterSpacing:"0em",fontWeight:"400"}],"headline-sm":["1.375rem",{lineHeight:"1.35",letterSpacing:"-0.01em",fontWeight:"600"}],"label-code-sm":["0.75rem",{lineHeight:"1.3",letterSpacing:"0.06em",fontWeight:"500"}],"body-lg":["1.125rem",{lineHeight:"1.6",letterSpacing:"-0.01em",fontWeight:"400"}],"body-sm":["0.875rem",{lineHeight:"1.5",letterSpacing:"0em",fontWeight:"400"}],"label-tech":["0.8125rem",{lineHeight:"1.4",letterSpacing:"0.04em",fontWeight:"500"}],"headline-md":["2rem",{lineHeight:"1.25",letterSpacing:"-0.02em",fontWeight:"600"}],"headline-lg":["3rem",{lineHeight:"1.15",letterSpacing:"-0.03em",fontWeight:"700"}]}}}};</script></head><body class="bg-surface font-body-md text-on-surface antialiased selection:bg-primary selection:text-on-primary min-h-screen flex flex-col justify-between"><header class="fixed top-0 left-0 right-0 z-50 bg-surface-container-lowest/80 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)] border-b border-surface-container-high/40"><div class="h-20 max-w-[80rem] mx-auto px-margin md:px-margin-md lg:px-margin-lg flex items-center justify-between gap-space-md"><div class="flex items-center gap-space-md shrink-0"><a class="flex items-center gap-space-sm group" data-path="home" href="#"><div class="h-9 w-9 rounded-lg bg-surface-container-high border border-primary/30 flex items-center justify-center font-display-hero text-body-sm font-extrabold text-primary shadow-[0_0_15px_-3px_rgba(139,92,246,0.3)] group-hover:border-secondary transition-colors">AS</div><div class="flex flex-col"><span class="font-headline-sm text-headline-sm text-on-surface font-bold tracking-tight leading-none group-hover:text-primary transition-colors">Aayush Sarowa</span><span class="font-label-code-sm text-label-code-sm text-secondary tracking-widest uppercase mt-space-xs">Systems &amp; Architecture</span></div></a></div><nav class="hidden lg:flex items-center gap-space-xs bg-surface-container-lowest/60 p-1.5 rounded-xl border border-surface-container-high/30" data-active-classes="bg-surface-container-high text-primary font-semibold shadow-[0_0_20px_-4px_rgba(139,92,246,0.35)]"><a class="px-space-md py-space-sm text-on-surface-variant font-body-sm text-body-sm hover:text-on-surface hover:bg-surface-container-high transition-all rounded-lg" data-path="home" href="#">Home</a><a class="px-space-md py-space-sm text-on-surface-variant font-body-sm text-body-sm hover:text-on-surface hover:bg-surface-container-high transition-all rounded-lg" data-path="about" href="#">About</a><a class="px-space-md py-space-sm text-on-surface-variant font-body-sm text-body-sm hover:text-on-surface hover:bg-surface-container-high transition-all rounded-lg" data-path="skills" href="#">Skills</a><a class="px-space-md py-space-sm text-on-surface-variant font-body-sm text-body-sm hover:text-on-surface hover:bg-surface-container-high transition-all rounded-lg" data-path="projects" href="#">Projects</a><a class="px-space-md py-space-sm text-on-surface-variant font-body-sm text-body-sm hover:text-on-surface hover:bg-surface-container-high transition-all rounded-lg" data-path="develop-club" href="#">dEVELoPE Club</a><a class="px-space-md py-space-sm text-on-surface-variant font-body-sm text-body-sm hover:text-on-surface hover:bg-surface-container-high transition-all rounded-lg" data-path="join-develop" href="#">Join dEVELoPE</a><a class="px-space-md py-space-sm text-on-surface-variant font-body-sm text-body-sm hover:text-on-surface hover:bg-surface-container-high transition-all rounded-lg" data-path="hobbies" href="#">Hobbies</a><a class="px-space-md py-space-sm text-on-surface-variant font-body-sm text-body-sm hover:text-on-surface hover:bg-surface-container-high transition-all rounded-lg" data-path="contact" href="#">Contact</a></nav><div class="flex items-center gap-space-sm sm:gap-space-md shrink-0"><a class="inline-flex items-center gap-space-xs px-space-md sm:px-space-lg py-2.5 rounded-lg bg-primary-container/20 text-on-surface font-headline-sm text-body-sm font-semibold border border-primary/30 shadow-[0_0_20px_-4px_rgba(139,92,246,0.4)] hover:bg-primary-container/30 hover:border-secondary hover:shadow-[0_0_30px_0px_rgba(6,182,212,0.5)] hover:-translate-y-0.5 transition-all" data-path="join-develop" href="#"><span class="w-2 h-2 rounded-full bg-secondary animate-pulse"></span><span class="hidden sm:inline">Join dEVELoPE</span><span class="sm:hidden">Join</span></a><a class="hidden md:inline-flex items-center gap-space-xs px-space-md py-2.5 rounded-lg bg-surface-container-high/60 text-on-surface-variant hover:text-on-surface font-body-sm text-body-sm border border-surface-container-high hover:border-primary/40 transition-all" data-path="contact" href="#">Let's Connect</a></div></div></header><main class="w-full pt-20 bg-surface flex-1"><div class="flex flex-col w-full text-on-surface">
+<!-- ATMOSPHERIC BACKGROUND RADIALS -->
+<div class="relative w-full overflow-hidden">
+<div class="pointer-events-none absolute -top-40 left-1/2 -translate-x-1/2 w-[48rem] h-[24rem] bg-gradient-to-b from-primary/15 via-secondary/10 to-transparent blur-3xl opacity-70"></div>
+<div class="pointer-events-none absolute top-[30rem] right-0 w-[30rem] h-[30rem] bg-secondary/10 blur-[100px] rounded-full"></div>
+<div class="pointer-events-none absolute top-[60rem] -left-20 w-[26rem] h-[26rem] bg-primary/10 blur-[120px] rounded-full"></div>
+<!-- HERO & TELEMETRY PROTOCOL HEADER -->
+<section class="max-w-[80rem] mx-auto px-margin md:px-margin-md lg:px-margin-lg pt-space-xl pb-space-2xl relative z-10">
+<!-- SYSTEM TELEMETRY STRIP -->
+<div class="flex flex-wrap items-center justify-between gap-space-sm pb-space-lg">
+<div class="inline-flex items-center gap-space-xs px-space-md py-1 rounded-full bg-primary/10 text-primary font-label-code-sm text-label-code-sm">
+<span class="w-2 h-2 rounded-full bg-secondary animate-ping"></span>
+<span>// NODE ENTRY PROTOCOL // DEV-AUTH v4.9 // ZERO-COST OPEN ADMISSION</span>
+</div>
+<div class="flex items-center gap-space-md text-outline font-label-code-sm text-label-code-sm">
+<span class="flex items-center gap-1.5"><span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>LATENCY: 14ms</span>
+<span class="hidden sm:inline text-surface-container-highest">//</span>
+<span class="hidden sm:flex items-center gap-1.5"><span class="w-1.5 h-1.5 rounded-full bg-primary"></span>CIPHER: SHA256-ED25519</span>
+<span class="hidden sm:inline text-surface-container-highest">//</span>
+<span class="text-on-surface-variant font-medium">PM SHRI KV CHURU CHAPTER</span>
+</div>
+</div>
+<!-- MAIN HEADLINE -->
+<div class="max-w-4xl space-y-space-md">
+<h1 class="font-display-hero text-headline-lg-mobile md:text-display-hero font-extrabold tracking-tight leading-[1.05]">
+          Initialize Your dEVELoPE <br class="hidden sm:inline"/>
+<span class="bg-gradient-to-r from-primary via-secondary to-tertiary bg-clip-text text-transparent">Credentials &amp; 5-Digit Pass</span>
+</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-3xl">
+          Founded by 12-year-old systems architect <span class="text-on-surface font-semibold">Aayush Sarowa</span>. Complete your induction profile to receive an official cryptographic membership certificate, Discord Guild clearance token, and persistent decentralized registry index.
+        </p>
+</div>
+<!-- LIVE STATUS METRIC PILLS -->
+<div class="grid grid-cols-1 sm:grid-cols-3 gap-space-md pt-space-xl">
+<div class="p-space-md rounded-xl bg-surface-container-low shadow-sm flex items-center gap-space-md">
+<div class="w-11 h-11 rounded-lg bg-surface-container-high flex items-center justify-center text-secondary">
+<span class="material-symbols-outlined">badge</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-code-sm text-label-code-sm text-outline uppercase tracking-wider">Global Registry</span>
+<span class="font-headline-sm text-headline-sm font-bold text-on-surface">10,248 Verified</span>
+</div>
+</div>
+<div class="p-space-md rounded-xl bg-surface-container-low shadow-sm flex items-center gap-space-md">
+<div class="w-11 h-11 rounded-lg bg-surface-container-high flex items-center justify-center text-primary">
+<span class="material-symbols-outlined">bolt</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-code-sm text-label-code-sm text-outline uppercase tracking-wider">Verification Latency</span>
+<span class="font-headline-sm text-headline-sm font-bold text-on-surface">Instant (&lt;250ms)</span>
+</div>
+</div>
+<div class="p-space-md rounded-xl bg-surface-container-low shadow-sm flex items-center gap-space-md">
+<div class="w-11 h-11 rounded-lg bg-surface-container-high flex items-center justify-center text-secondary">
+<span class="material-symbols-outlined">lock_open</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-code-sm text-label-code-sm text-outline uppercase tracking-wider">Induction Fee</span>
+<span class="font-headline-sm text-headline-sm font-bold text-on-surface">100% Free &amp; Open</span>
+</div>
+</div>
+</div>
+</section>
+<!-- TWO-COLUMN INTERACTIVE PORTAL -->
+<section class="max-w-[80rem] mx-auto px-margin md:px-margin-md lg:px-margin-lg pb-space-3xl relative z-10">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter-lg items-start">
+<!-- LEFT COLUMN: INTAKE REGISTRATION PROTOCOL FORM -->
+<div class="lg:col-span-7 flex flex-col gap-space-lg">
+<div class="p-space-lg md:p-space-xl rounded-2xl bg-surface-container-low/90 backdrop-blur-xl shadow-xl flex flex-col gap-space-lg">
+<!-- FORM TITLE & TERMINAL BAR -->
+<div class="flex items-center justify-between pb-space-sm">
+<div class="flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-secondary text-headline-sm">terminal</span>
+<div>
+<h2 class="font-headline-sm text-headline-sm font-bold text-on-surface">Induction Intake Terminal</h2>
+<p class="font-label-tech text-label-tech text-outline">INPUT REPOSITORIES &amp; ACADEMIC TELEMETRY</p>
+</div>
+</div>
+<div class="flex items-center gap-1.5 px-3 py-1 rounded bg-surface-container-high font-label-code-sm text-label-code-sm text-secondary">
+<span class="w-2 h-2 rounded-full bg-secondary animate-pulse"></span>
+                ACTIVE
+              </div>
+</div>
+<form class="flex flex-col gap-space-lg" id="membershipForm" onsubmit="event.preventDefault(); window.generateAndVerifyPass();">
+<!-- SECTION 1: PERSONAL COORDINATES -->
+<div class="flex flex-col gap-space-md">
+<div class="flex items-center gap-space-xs font-label-tech text-label-tech text-primary font-semibold tracking-wider uppercase">
+<span class="material-symbols-outlined text-body-md">person_pin</span>
+<span>01. Personal Coordinates</span>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-12 gap-space-md">
+<div class="sm:col-span-8 flex flex-col gap-1.5">
+<label class="font-label-tech text-label-tech text-on-surface-variant flex items-center justify-between" for="inputName">
+<span>Full Name <span class="text-secondary">*</span></span>
+<span class="text-outline font-label-code-sm text-label-code-sm">DEV_IDENTITY</span>
+</label>
+<input class="w-full bg-surface-container-lowest text-on-surface font-body-md text-body-md px-space-md py-3 rounded-lg focus:outline-none focus:ring-1 focus:ring-secondary placeholder:text-outline-variant shadow-inner transition-all" id="inputName" placeholder="e.g. Maya Bhattacharya" required="" type="text" value="Aayush Sarowa"/>
+</div>
+<div class="sm:col-span-4 flex flex-col gap-1.5">
+<label class="font-label-tech text-label-tech text-on-surface-variant flex items-center justify-between" for="inputAge">
+<span>Age <span class="text-secondary">*</span></span>
+<span class="text-outline font-label-code-sm text-label-code-sm">CHRONO</span>
+</label>
+<input class="w-full bg-surface-container-lowest text-on-surface font-body-md text-body-md px-space-md py-3 rounded-lg focus:outline-none focus:ring-1 focus:ring-secondary placeholder:text-outline-variant shadow-inner transition-all" id="inputAge" max="99" min="8" placeholder="12" required="" type="number" value="12"/>
+</div>
+</div>
+<div class="flex flex-col gap-1.5">
+<label class="font-label-tech text-label-tech text-on-surface-variant" for="inputOccupation">
+                    Role / Engineering Trajectory <span class="text-secondary">*</span>
+</label>
+<select class="w-full bg-surface-container-lowest text-on-surface font-body-md text-body-md px-space-md py-3 rounded-lg focus:outline-none focus:ring-1 focus:ring-secondary shadow-inner transition-all cursor-pointer" id="inputOccupation">
+<option selected="" value="Student / Young Coder">Student / Young Coder (Primary/Middle/High School)</option>
+<option value="Undergrad Systems Researcher">Undergrad Systems Researcher (CS / ECE)</option>
+<option value="Hardware / Embedded Builder">Hardware / Embedded Builder (Robotics / IoT)</option>
+<option value="Educator / Institutional Mentor">Educator / Institutional Mentor</option>
+<option value="Self-Taught Systems Enthusiast">Self-Taught Systems Enthusiast</option>
+</select>
+</div>
+</div>
+<!-- SECTION 2: GEOGRAPHIC COORDINATES -->
+<div class="flex flex-col gap-space-md pt-space-xs">
+<div class="flex items-center gap-space-xs font-label-tech text-label-tech text-primary font-semibold tracking-wider uppercase">
+<span class="material-symbols-outlined text-body-md">explore</span>
+<span>02. Geographic Coordinates</span>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-3 gap-space-md">
+<div class="flex flex-col gap-1.5">
+<label class="font-label-tech text-label-tech text-on-surface-variant" for="inputCountry">
+                      Country <span class="text-secondary">*</span>
+</label>
+<input class="w-full bg-surface-container-lowest text-on-surface font-body-md text-body-md px-space-md py-3 rounded-lg focus:outline-none focus:ring-1 focus:ring-secondary placeholder:text-outline-variant shadow-inner transition-all" id="inputCountry" placeholder="India" required="" type="text" value="India"/>
+</div>
+<div class="flex flex-col gap-1.5">
+<label class="font-label-tech text-label-tech text-on-surface-variant" for="inputState">
+                      State / Province <span class="text-secondary">*</span>
+</label>
+<input class="w-full bg-surface-container-lowest text-on-surface font-body-md text-body-md px-space-md py-3 rounded-lg focus:outline-none focus:ring-1 focus:ring-secondary placeholder:text-outline-variant shadow-inner transition-all" id="inputState" placeholder="Rajasthan" required="" type="text" value="Rajasthan"/>
+</div>
+<div class="flex flex-col gap-1.5">
+<label class="font-label-tech text-label-tech text-on-surface-variant" for="inputDistrict">
+                      District / City <span class="text-secondary">*</span>
+</label>
+<input class="w-full bg-surface-container-lowest text-on-surface font-body-md text-body-md px-space-md py-3 rounded-lg focus:outline-none focus:ring-1 focus:ring-secondary placeholder:text-outline-variant shadow-inner transition-all" id="inputDistrict" placeholder="Churu" required="" type="text" value="Churu"/>
+</div>
+</div>
+</div>
+<!-- SECTION 3: ACADEMIC & GUILD ALIGNMENT -->
+<div class="flex flex-col gap-space-md pt-space-xs">
+<div class="flex items-center gap-space-xs font-label-tech text-label-tech text-primary font-semibold tracking-wider uppercase">
+<span class="material-symbols-outlined text-body-md">hub</span>
+<span>03. Academic &amp; Guild Alignment</span>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-12 gap-space-md">
+<div class="sm:col-span-7 flex flex-col gap-1.5">
+<label class="font-label-tech text-label-tech text-on-surface-variant" for="inputInstitution">
+                      Institution / School Node <span class="text-secondary">*</span>
+</label>
+<input class="w-full bg-surface-container-lowest text-on-surface font-body-md text-body-md px-space-md py-3 rounded-lg focus:outline-none focus:ring-1 focus:ring-secondary placeholder:text-outline-variant shadow-inner transition-all" id="inputInstitution" placeholder="e.g. Kendriya Vidyalaya / IIT / DPS" required="" type="text" value="PM Shri Kendriya Vidyalaya Churu"/>
+</div>
+<div class="sm:col-span-5 flex flex-col gap-1.5">
+<label class="font-label-tech text-label-tech text-on-surface-variant" for="inputGithub">
+                      GitHub Alias / Dev URL
+                    </label>
+<input class="w-full bg-surface-container-lowest text-on-surface font-body-md text-body-md px-space-md py-3 rounded-lg focus:outline-none focus:ring-1 focus:ring-secondary placeholder:text-outline-variant shadow-inner transition-all" id="inputGithub" placeholder="@yourhandle" type="text" value="@aayush_dev"/>
+</div>
+</div>
+<div class="flex flex-col gap-1.5">
+<label class="font-label-tech text-label-tech text-on-surface-variant" for="inputTrack">
+                    Primary Guild Track Selection <span class="text-secondary">*</span>
+</label>
+<select class="w-full bg-surface-container-lowest text-on-surface font-body-md text-body-md px-space-md py-3 rounded-lg focus:outline-none focus:ring-1 focus:ring-secondary shadow-inner transition-all cursor-pointer" id="inputTrack">
+<option selected="" value="Low-Level Systems &amp; Kernel (C++, Rust, WASM)">Low-Level Systems &amp; Kernel (C++, Rust, WASM)</option>
+<option value="Real-Time IoT &amp; Telemetry (Sensors, MQTT, MicroPython)">Real-Time IoT &amp; Telemetry (Sensors, MQTT, MicroPython)</option>
+<option value="Neural Game Engines &amp; Math (Bitboards, Minimax)">Neural Game Engines &amp; Math (Bitboards, Minimax)</option>
+<option value="Next-Gen Web &amp; 3D Shaders (Three.js, WebGL)">Next-Gen Web &amp; 3D Shaders (Three.js, WebGL)</option>
+<option value="Distributed Protocols &amp; P2P (Raft, Gossip)">Distributed Protocols &amp; P2P (Raft, Gossip)</option>
+<option value="Deterministic Tooling &amp; DevSecOps">Deterministic Tooling &amp; DevSecOps</option>
+</select>
+</div>
+</div>
+<!-- CONSENT & COMMUNITY CREED -->
+<div class="p-space-md rounded-xl bg-surface-container-lowest flex items-start gap-space-sm">
+<input checked="" class="mt-1 w-4 h-4 rounded text-secondary focus:ring-secondary bg-surface-container cursor-pointer" id="creedConsent" required="" type="checkbox"/>
+<label class="font-body-sm text-body-sm text-on-surface-variant cursor-pointer select-none" for="creedConsent">
+                  I agree to uphold the <span class="text-secondary font-semibold">open-source peer pedagogy</span> and community creed of dEVELoPE Club. I commit to shipping verifiable code, mentoring newer builders, and maintaining academic curiosity without paywalls.
+                </label>
+</div>
+<!-- SUBMIT / RE-GENERATE BUTTON -->
+<button class="w-full py-4 px-space-lg rounded-xl bg-gradient-to-r from-primary via-primary-container to-secondary text-surface-container-lowest font-headline-sm text-body-md font-bold flex items-center justify-center gap-space-sm shadow-[0_0_35px_-5px_rgba(139,92,246,0.6)] hover:shadow-[0_0_45px_0px_rgba(6,182,212,0.8)] hover:scale-[1.01] active:scale-[0.99] transition-all cursor-pointer" id="btnSubmitForm" type="submit">
+<span class="material-symbols-outlined text-headline-sm">lock_person</span>
+<span>Generate Verified 5-Digit Credential &amp; Pass</span>
+</button>
+</form>
+<!-- SIMULATED REAL-TIME TRANSMISSION TERMINAL LOG -->
+<div class="p-space-md rounded-xl bg-surface-container-lowest flex flex-col gap-1.5 font-label-code-sm text-label-code-sm text-outline overflow-x-auto" id="terminalStream">
+<div class="flex items-center justify-between text-secondary">
+<span class="flex items-center gap-1.5"><span class="w-2 h-2 rounded-full bg-secondary animate-pulse"></span>dEVELoPE RECEPTION CONSOLE</span>
+<span class="text-outline" id="logTimestamp">UTC: 2025-10-24 14:02:18</span>
+</div>
+<div class="text-on-surface-variant font-mono">&gt; Node ingress initialized. Listening on TLS port 443...</div>
+<div class="text-secondary font-mono" id="dynamicLog">&gt; Ready: Awaiting signature execution... [STATUS: SYNCHRONIZED]</div>
+</div>
+</div>
+</div>
+<!-- RIGHT COLUMN: DYNAMIC CREDENTIAL PASS & DOCUMENT VIEWER -->
+<div class="lg:col-span-5 flex flex-col gap-space-lg sticky top-28">
+<!-- HOLOGRAPHIC CYBER MEMBERSHIP PASS CARD -->
+<div class="relative group">
+<!-- AMBIENT CARD GLOW -->
+<div class="absolute -inset-0.5 bg-gradient-to-r from-primary via-secondary to-primary-container rounded-3xl blur-md opacity-40 group-hover:opacity-75 transition-opacity"></div>
+<div class="relative rounded-3xl bg-surface-container-low p-space-lg md:p-space-xl overflow-hidden shadow-2xl flex flex-col justify-between min-h-[460px]">
+<!-- CARD WATERMARK ACCENT -->
+<div class="absolute -right-12 -bottom-12 w-64 h-64 bg-secondary/10 rounded-full blur-2xl pointer-events-none"></div>
+<div class="absolute top-0 right-0 p-space-lg opacity-10 pointer-events-none select-none font-display-hero text-8xl font-black text-on-surface">
+                DEV
+              </div>
+<!-- CARD HEADER -->
+<div class="flex items-start justify-between z-10">
+<div class="flex items-center gap-space-sm">
+<div class="h-11 w-11 rounded-xl bg-primary-container/20 flex items-center justify-center font-display-hero text-headline-sm font-black text-primary shadow-[0_0_15px_rgba(139,92,246,0.5)]">
+                    dE
+                  </div>
+<div class="flex flex-col">
+<span class="font-headline-sm text-body-md font-bold text-on-surface tracking-tight leading-none">dEVELoPE CLUB</span>
+<span class="font-label-code-sm text-label-code-sm text-secondary uppercase tracking-widest mt-1">Official Member Pass</span>
+</div>
+</div>
+<!-- DIGITAL CHIP & RFID -->
+<div class="flex flex-col items-end gap-1">
+<div class="w-9 h-7 rounded bg-gradient-to-br from-secondary/40 via-primary/30 to-surface-bright flex items-center justify-center shadow-inner">
+<span class="material-symbols-outlined text-body-sm text-secondary">memory</span>
+</div>
+<span class="font-label-code-sm text-[0.625rem] text-outline uppercase tracking-wider">RFID // 13.56MHz</span>
+</div>
+</div>
+<!-- CARD CENTERPIECE: 5-DIGIT REGISTRY BADGE -->
+<div class="my-space-md z-10 flex flex-col gap-space-xs">
+<div class="flex items-baseline justify-between">
+<span class="font-label-code-sm text-label-code-sm text-outline uppercase tracking-wider">Registry Index Code</span>
+<span class="inline-flex items-center gap-1 font-label-code-sm text-label-code-sm text-secondary">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary animate-ping"></span> CRYPTO_CONFIRMED
+                  </span>
+</div>
+<div class="flex items-center justify-between p-space-md rounded-xl bg-surface-container-lowest/80 shadow-inner">
+<div class="flex flex-col">
+<span class="font-label-tech text-label-tech text-outline font-semibold">OFFICIAL ID</span>
+<span class="font-headline-lg text-headline-lg font-black tracking-widest text-secondary drop-shadow-[0_0_12px_rgba(76,215,246,0.5)]" id="cardMemberId">
+                      DEV-58291
+                    </span>
+</div>
+<!-- EMBEDDED DYNAMIC QR SVG (INLINE) -->
+<div class="w-16 h-16 p-1 rounded-lg bg-on-surface flex items-center justify-center shadow">
+<svg class="w-full h-full text-surface-container-lowest" fill="currentColor" viewbox="0 0 24 24">
+<path d="M2 2h8v8H2V2zm2 2v4h4V4H4zm10-2h8v8h-8V2zm2 2v4h4V4h-4zM2 14h8v8H2v-8zm2 2v4h4v-4H4zm14-2h4v2h-4v-2zm-4 0h2v4h-2v-4zm2 4h2v2h-2v-2zm-2 2h2v2h-2v-2zm4 0h4v2h-4v-2zm2-2h2v2h-2v-2zm-8-6h2v2h-2v-2zm2 2h2v2h-2v-2zm2-2h2v2h-2v-2z"></path>
+</svg>
+</div>
+</div>
+</div>
+<!-- CARD TELEMETRY DATA GRID -->
+<div class="grid grid-cols-2 sm:grid-cols-3 gap-y-space-sm gap-x-space-md z-10 pt-space-xs font-label-code-sm text-label-code-sm">
+<div>
+<div class="text-outline uppercase text-[0.625rem]">Candidate</div>
+<div class="font-headline-sm text-body-sm font-bold text-on-surface truncate" id="cardName">Aayush Sarowa</div>
+</div>
+<div>
+<div class="text-outline uppercase text-[0.625rem]">Age / Status</div>
+<div class="text-secondary truncate" id="cardAgeRole">12 yrs · Student</div>
+</div>
+<div>
+<div class="text-outline uppercase text-[0.625rem]">Location</div>
+<div class="text-on-surface truncate" id="cardLocation">Churu, RJ (IN)</div>
+</div>
+<div class="col-span-2">
+<div class="text-outline uppercase text-[0.625rem]">Institution Node</div>
+<div class="text-on-surface-variant truncate" id="cardInstitution">PM Shri Kendriya Vidyalaya</div>
+</div>
+<div>
+<div class="text-outline uppercase text-[0.625rem]">Node Track</div>
+<div class="text-primary truncate font-semibold" id="cardTrack">Low-Level Systems</div>
+</div>
+</div>
+<!-- CARD FOOTER: BARCODE & WATERMARK -->
+<div class="pt-space-md mt-space-sm z-10 flex flex-col gap-1.5">
+<!-- SIMULATED BARCODE VECTOR STRIP -->
+<div class="h-6 w-full flex items-center justify-between opacity-80 overflow-hidden">
+<div class="w-1 h-full bg-on-surface"></div>
+<div class="w-2 h-full bg-on-surface"></div>
+<div class="w-0.5 h-full bg-on-surface"></div>
+<div class="w-3 h-full bg-on-surface"></div>
+<div class="w-1.5 h-full bg-on-surface"></div>
+<div class="w-0.5 h-full bg-on-surface"></div>
+<div class="w-2 h-full bg-on-surface"></div>
+<div class="w-3.5 h-full bg-on-surface"></div>
+<div class="w-1 h-full bg-on-surface"></div>
+<div class="w-0.5 h-full bg-on-surface"></div>
+<div class="w-2 h-full bg-on-surface"></div>
+<div class="w-1.5 h-full bg-on-surface"></div>
+<div class="w-3 h-full bg-on-surface"></div>
+<div class="w-0.5 h-full bg-on-surface"></div>
+<div class="w-2 h-full bg-on-surface"></div>
+<div class="w-1 h-full bg-on-surface"></div>
+<div class="w-3.5 h-full bg-on-surface"></div>
+<div class="w-0.5 h-full bg-on-surface"></div>
+<div class="w-2 h-full bg-on-surface"></div>
+<div class="w-1.5 h-full bg-on-surface"></div>
+<div class="w-3 h-full bg-on-surface"></div>
+<div class="w-1 h-full bg-on-surface"></div>
+<div class="w-2 h-full bg-on-surface"></div>
+</div>
+<div class="flex items-center justify-between font-label-code-sm text-[0.625rem] text-outline">
+<span>FOUNDED BY AAYUSH SAROWA // AGE 12</span>
+<span>PM SHRI KV CHURU FOUNDATION</span>
+</div>
+</div>
+</div>
+</div>
+<!-- DOCUMENT PREVIEW ACCORDION & ACTION CONTROLS -->
+<div class="p-space-lg rounded-2xl bg-surface-container-low shadow-lg flex flex-col gap-space-md">
+<div class="flex items-center justify-between">
+<span class="font-label-tech text-label-tech text-outline uppercase font-semibold flex items-center gap-1.5">
+<span class="material-symbols-outlined text-body-md text-secondary">verified</span>
+                Decentralized Induction Document
+              </span>
+<span class="px-2 py-0.5 rounded font-label-code-sm text-[0.6875rem] bg-secondary/15 text-secondary font-bold" id="docStatusBadge">
+                READY TO EXPORT
+              </span>
+</div>
+<!-- MINI CERTIFICATE CHARTER BOX -->
+<div class="p-space-md rounded-xl bg-surface-container-lowest flex flex-col gap-space-sm font-label-code-sm text-label-code-sm" id="certificateCharterBox">
+<div class="flex justify-between items-center text-outline">
+<span>DOC_TYPE: CHARTER_AFFILIATION</span>
+<span id="docTimestamp">REV: 2025.10.DEV</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface leading-relaxed">
+                This document certifies that <span class="text-secondary font-bold" id="docCandidateName">Aayush Sarowa</span> is duly inducted into the <span class="text-primary font-bold">dEVELoPE Club</span> as an authenticated Junior Systems Fellow under ID <span class="px-1.5 py-0.5 rounded bg-secondary/20 text-secondary font-mono font-bold" id="docCredentialBadge">DEV-58291</span>.
+              </p>
+<div class="pt-space-xs flex items-center justify-between text-outline">
+<div class="flex flex-col">
+<span class="text-[0.625rem]">Lead Architect &amp; Founder</span>
+<span class="font-semibold text-on-surface">Aayush Sarowa (Age 12)</span>
+</div>
+<div class="flex flex-col items-end">
+<span class="text-[0.625rem]">Security Fingerprint</span>
+<span class="text-primary text-[0.625rem]" id="docHash">7f8e3a2b...c914</span>
+</div>
+</div>
+</div>
+<!-- ACTION CONTROLS -->
+<div class="flex flex-col gap-space-xs">
+<div class="grid grid-cols-2 gap-space-xs">
+<button class="w-full py-2.5 px-space-sm rounded-lg bg-surface-container-high text-on-surface hover:text-secondary font-label-tech text-label-tech font-semibold flex items-center justify-center gap-1.5 transition-all" onclick="window.copyCredentialId();" type="button">
+<span class="material-symbols-outlined text-body-md">content_copy</span>
+<span id="copyBtnText">Copy Registry ID</span>
+</button>
+<button class="w-full py-2.5 px-space-sm rounded-lg bg-surface-container-high text-on-surface hover:text-primary font-label-tech text-label-tech font-semibold flex items-center justify-center gap-1.5 transition-all" onclick="window.downloadCharterDoc();" type="button">
+<span class="material-symbols-outlined text-body-md">download</span>
+<span>Export Doc / PDF</span>
+</button>
+</div>
+<a class="w-full py-3 px-space-md rounded-lg bg-[#5865F2]/20 hover:bg-[#5865F2]/30 text-on-surface font-headline-sm text-body-sm font-semibold flex items-center justify-center gap-space-sm shadow-md transition-all" href="https://discord.com" id="discordGuildLink" rel="noreferrer" target="_blank">
+<svg class="w-5 h-5 fill-current" viewbox="0 0 24 24"><path d="M20.317 4.37a19.791 19.791 0 0 0-4.885-1.515.074.074 0 0 0-.079.037c-.21.375-.444.864-.608 1.25a18.27 18.27 0 0 0-5.487 0 12.64 12.64 0 0 0-.617-1.25.077.077 0 0 0-.079-.037A19.736 19.736 0 0 0 3.677 4.37a.07.07 0 0 0-.032.027C.533 9.046-.32 13.58.099 18.057a.082.082 0 0 0 .031.057 19.9 19.9 0 0 0 5.993 3.03.078.078 0 0 0 .084-.028c.462-.63.874-1.295 1.226-1.994.021-.041.001-.09-.041-.106a13.107 13.107 0 0 1-1.872-.892.077.077 0 0 1-.008-.128 10.2 10.2 0 0 0 .372-.292.074.074 0 0 1 .077-.01c3.929 1.793 8.18 1.793 12.061 0a.074.074 0 0 1 .078.01c.12.098.246.198.373.292a.077.077 0 0 1-.006.127 12.299 12.299 0 0 1-1.873.894.077.077 0 0 0-.041.107c.36.698.772 1.362 1.225 1.993a.076.076 0 0 0 .084.028 19.839 19.839 0 0 0 6.002-3.03.077.077 0 0 0 .032-.054c.5-5.177-.838-9.674-3.549-13.66a.061.061 0 0 0-.031-.028zM8.02 15.33c-1.183 0-2.157-1.085-2.157-2.419 0-1.333.956-2.419 2.157-2.419 1.21 0 2.176 1.096 2.157 2.42 0 1.333-.956 2.418-2.157 2.418zm7.975 0c-1.183 0-2.157-1.085-2.157-2.419 0-1.333.955-2.419 2.157-2.419 1.21 0 2.176 1.096 2.157 2.42 0 1.333-.946 2.418-2.157 2.418z"></path></svg>
+<span>Authorize &amp; Join Discord Guild (DEV-58291)</span>
+</a>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- INDUCTION PRIVILEGES & UNLOCK PROTOCOLS -->
+<section class="max-w-[80rem] mx-auto px-margin md:px-margin-md lg:px-margin-lg pb-space-3xl relative z-10">
+<div class="flex flex-col gap-space-sm pb-space-xl">
+<div class="inline-flex items-center gap-space-xs font-label-code-sm text-label-code-sm text-secondary uppercase tracking-widest">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>
+<span>SYSTEM PRIVILEGES // TIER 1 INDUCTION</span>
+</div>
+<h2 class="font-headline-md text-headline-md font-bold text-on-surface">
+          What Your 5-Digit Credential Unlocks
+        </h2>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-2xl">
+          dEVELoPE is not an email newsletter—it is a functional, peer-driven decentralized engineering laboratory with immediate physical and compute resources.
+        </p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-space-md">
+<!-- PERK 1 -->
+<div class="p-space-lg rounded-2xl bg-surface-container-low shadow-sm flex flex-col justify-between group hover:shadow-lg transition-all">
+<div class="space-y-space-sm">
+<div class="w-12 h-12 rounded-xl bg-surface-container-high flex items-center justify-center text-secondary group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-headline-sm">forum</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm font-bold text-on-surface">Discord Guild Clearance</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+              Instant bypass to specialized track channels (Kernel C++, Robotics, WebGL) and round-the-clock pair-programming voice pods.
+            </p>
+</div>
+<div class="pt-space-md font-label-code-sm text-label-code-sm text-secondary flex items-center gap-1">
+<span>PERM: GUILD_MEMBER</span>
+<span class="material-symbols-outlined text-body-sm">chevron_right</span>
+</div>
+</div>
+<!-- PERK 2 -->
+<div class="p-space-lg rounded-2xl bg-surface-container-low shadow-sm flex flex-col justify-between group hover:shadow-lg transition-all">
+<div class="space-y-space-sm">
+<div class="w-12 h-12 rounded-xl bg-surface-container-high flex items-center justify-center text-primary group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-headline-sm">developer_board</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm font-bold text-on-surface">Hardware Grant Grants</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+              Priority eligibility to receive physical Raspberry Pi 5, ESP32 telemetry kits, and Jetson Orin compute modules delivered to your school.
+            </p>
+</div>
+<div class="pt-space-md font-label-code-sm text-label-code-sm text-primary flex items-center gap-1">
+<span>PERM: HARDWARE_ALLOWANCE</span>
+<span class="material-symbols-outlined text-body-sm">chevron_right</span>
+</div>
+</div>
+<!-- PERK 3 -->
+<div class="p-space-lg rounded-2xl bg-surface-container-low shadow-sm flex flex-col justify-between group hover:shadow-lg transition-all">
+<div class="space-y-space-sm">
+<div class="w-12 h-12 rounded-xl bg-surface-container-high flex items-center justify-center text-secondary group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-headline-sm">code_blocks</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm font-bold text-on-surface">Live Architectural Reviews</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+              Weekly pull request breakdowns and architectural critique sessions hosted by Aayush Sarowa and high-school systems leads.
+            </p>
+</div>
+<div class="pt-space-md font-label-code-sm text-label-code-sm text-secondary flex items-center gap-1">
+<span>PERM: REPO_CRITIQUE</span>
+<span class="material-symbols-outlined text-body-sm">chevron_right</span>
+</div>
+</div>
+<!-- PERK 4 -->
+<div class="p-space-lg rounded-2xl bg-surface-container-low shadow-sm flex flex-col justify-between group hover:shadow-lg transition-all">
+<div class="space-y-space-sm">
+<div class="w-12 h-12 rounded-xl bg-surface-container-high flex items-center justify-center text-primary group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-headline-sm">lan</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm font-bold text-on-surface">Local Chapter Pods</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+              Direct connection with nearby Kendriya Vidyalaya and global school clusters spanning Churu, Delhi, Bengaluru, and overseas nodes.
+            </p>
+</div>
+<div class="pt-space-md font-label-code-sm text-label-code-sm text-primary flex items-center gap-1">
+<span>PERM: NODE_CLUSTER</span>
+<span class="material-symbols-outlined text-body-sm">chevron_right</span>
+</div>
+</div>
+</div>
+</section>
+<!-- FOUNDER'S NOTE & INTEGRITY CLAUSE -->
+<section class="max-w-[80rem] mx-auto px-margin md:px-margin-md lg:px-margin-lg pb-space-3xl relative z-10">
+<div class="p-space-xl md:p-space-2xl rounded-3xl bg-surface-container-low shadow-xl relative overflow-hidden">
+<div class="absolute -right-20 -top-20 w-80 h-80 bg-primary/10 rounded-full blur-3xl pointer-events-none"></div>
+<div class="relative z-10 flex flex-col lg:flex-row items-center gap-space-xl justify-between">
+<div class="flex flex-col gap-space-md max-w-2xl">
+<div class="inline-flex items-center gap-space-xs font-label-code-sm text-label-code-sm text-primary uppercase tracking-wider">
+<span class="material-symbols-outlined text-body-md">format_quote</span>
+<span>Founder's Induction Manifesto</span>
+</div>
+<blockquote class="font-headline-sm md:font-headline-md text-headline-sm md:text-headline-md text-on-surface font-semibold italic leading-snug">
+              “Whether you are 10 or 25, writing your first line of C++ or designing a distributed telemetry pipeline—your curiosity and willingness to build from first principles is your only qualification.”
+            </blockquote>
+<div class="flex items-center gap-space-md pt-space-xs">
+<div class="w-12 h-12 rounded-full bg-surface-container-highest flex items-center justify-center font-display-hero text-body-md font-extrabold text-secondary">
+                AS
+              </div>
+<div class="flex flex-col">
+<span class="font-headline-sm text-body-md font-bold text-on-surface">Aayush Sarowa</span>
+<span class="font-label-code-sm text-label-code-sm text-outline">Founder &amp; Lead Architect, dEVELoPE Club // Age 12 (PM Shri KV Churu)</span>
+</div>
+</div>
+</div>
+<div class="w-full lg:w-auto p-space-lg rounded-2xl bg-surface-container-lowest flex flex-col gap-space-sm min-w-[280px]">
+<span class="font-label-tech text-label-tech text-secondary font-bold uppercase tracking-wider">Chapter Metrics</span>
+<div class="flex items-baseline justify-between border-b border-surface-variant/30 pb-2">
+<span class="font-body-sm text-body-sm text-on-surface-variant">Host Institution</span>
+<span class="font-label-code-sm text-label-code-sm text-on-surface">PM Shri KV Churu</span>
+</div>
+<div class="flex items-baseline justify-between border-b border-surface-variant/30 pb-2">
+<span class="font-body-sm text-body-sm text-on-surface-variant">Current Release</span>
+<span class="font-label-code-sm text-label-code-sm text-secondary">dEVEL-4.9-PROD</span>
+</div>
+<div class="flex items-baseline justify-between border-b border-surface-variant/30 pb-2">
+<span class="font-body-sm text-body-sm text-on-surface-variant">Active Peer Pods</span>
+<span class="font-label-code-sm text-label-code-sm text-primary">64 Clusters</span>
+</div>
+<div class="flex items-baseline justify-between">
+<span class="font-body-sm text-body-sm text-on-surface-variant">Open-Source Code</span>
+<span class="font-label-code-sm text-label-code-sm text-on-surface">100% Public GPL-3</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- FREQUENTLY ANSWERED PROTOCOL QUERIES (FAQ) -->
+<section class="max-w-[80rem] mx-auto px-margin md:px-margin-md lg:px-margin-lg pb-space-3xl relative z-10">
+<div class="flex flex-col gap-space-sm pb-space-xl text-center items-center">
+<span class="font-label-code-sm text-label-code-sm text-secondary uppercase tracking-widest">// PROTOCOL FAQ //</span>
+<h2 class="font-headline-md text-headline-md font-bold text-on-surface">Everything You Need to Know</h2>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-xl">
+          Direct, zero-bureaucracy answers regarding the membership pass and club governance.
+        </p>
+</div>
+<div class="max-w-4xl mx-auto flex flex-col gap-space-md">
+<!-- FAQ 1 -->
+<details class="p-space-lg rounded-2xl bg-surface-container-low shadow-sm group cursor-pointer">
+<summary class="flex items-center justify-between font-headline-sm text-headline-sm text-on-surface font-semibold list-none select-none">
+<span>How is the 5-digit ID used in dEVELoPE systems?</span>
+<span class="material-symbols-outlined text-secondary transition-transform group-open:rotate-180">expand_more</span>
+</summary>
+<div class="pt-space-md font-body-md text-body-md text-on-surface-variant leading-relaxed">
+            Your 5-digit number (e.g., <code class="font-mono text-secondary">DEV-58291</code>) acts as your unique registry fingerprint. When entering the Discord Guild, submitting hardware grant requests, or issuing pull requests to dEVELoPE-managed repositories, your ID identifies your node and tracks your verified engineering contributions.
+          </div>
+</details>
+<!-- FAQ 2 -->
+<details class="p-space-lg rounded-2xl bg-surface-container-low shadow-sm group cursor-pointer">
+<summary class="flex items-center justify-between font-headline-sm text-headline-sm text-on-surface font-semibold list-none select-none">
+<span>Is there any membership cost, recurring fee, or paywall?</span>
+<span class="material-symbols-outlined text-secondary transition-transform group-open:rotate-180">expand_more</span>
+</summary>
+<div class="pt-space-md font-body-md text-body-md text-on-surface-variant leading-relaxed">
+            No. The dEVELoPE Club is founded strictly on non-commercial, open-source principles. All workshops, hardware kits, code reviews, and community tracks are 100% free and funded through institutional grants, hackathon wins, and peer donations.
+          </div>
+</details>
+<!-- FAQ 3 -->
+<details class="p-space-lg rounded-2xl bg-surface-container-low shadow-sm group cursor-pointer">
+<summary class="flex items-center justify-between font-headline-sm text-headline-sm text-on-surface font-semibold list-none select-none">
+<span>Can students and young developers outside India register?</span>
+<span class="material-symbols-outlined text-secondary transition-transform group-open:rotate-180">expand_more</span>
+</summary>
+<div class="pt-space-md font-body-md text-body-md text-on-surface-variant leading-relaxed">
+            Yes! While our primary node was inaugurated at PM Shri Kendriya Vidyalaya Churu in Rajasthan, we have active members across Europe, North America, Southeast Asia, and beyond. Global members participate through our asynchronous code clinics, virtual hackathons, and distributed Discord voice rooms.
+          </div>
+</details>
+<!-- FAQ 4 -->
+<details class="p-space-lg rounded-2xl bg-surface-container-low shadow-sm group cursor-pointer">
+<summary class="flex items-center justify-between font-headline-sm text-headline-sm text-on-surface font-semibold list-none select-none">
+<span>What if I am a complete beginner with zero lines of code?</span>
+<span class="material-symbols-outlined text-secondary transition-transform group-open:rotate-180">expand_more</span>
+</summary>
+<div class="pt-space-md font-body-md text-body-md text-on-surface-variant leading-relaxed">
+            Every master architect started with zero code. Our “First Principles Induction” track starts with low-level logic, simple C++ micro-benchmarks, and tactile electronics. Older and younger peers walk you through every git commit step by step.
+          </div>
+</details>
+</div>
+</section>
+</div>
+</div>
+<!-- CLIENT-SIDE PROTOCOL SCRIPT -->
+<script>
+  (function initProtocolState() {
+    let currentIdNumber = Math.floor(10000 + Math.random() * 90000);
+    let fullCredentialString = 'DEV-' + currentIdNumber;
+
+    function getFormattedHash(str) {
+      let hash = 0;
+      for (let i = 0; i < str.length; i++) {
+        hash = ((hash << 5) - hash) + str.charCodeAt(i);
+        hash |= 0;
+      }
+      return '0x' + Math.abs(hash).toString(16).padStart(8, '0') + '...9c1';
+    }
+
+    function updateLivePreview() {
+      const name = document.getElementById('inputName').value.trim() || 'Anonymous Cadet';
+      const age = document.getElementById('inputAge').value.trim() || '12';
+      const occ = document.getElementById('inputOccupation').value;
+      const country = document.getElementById('inputCountry').value.trim() || 'Global';
+      const state = document.getElementById('inputState').value.trim() || 'Node';
+      const district = document.getElementById('inputDistrict').value.trim() || 'Local';
+      const inst = document.getElementById('inputInstitution').value.trim() || 'Independent Node';
+      const track = document.getElementById('inputTrack').value;
+
+      // Update Card
+      document.getElementById('cardMemberId').innerText = fullCredentialString;
+      document.getElementById('cardName').innerText = name;
+      document.getElementById('cardAgeRole').innerText = age + ' yrs · ' + (occ.split('/')[0] || 'Cadet');
+      document.getElementById('cardLocation').innerText = district + ', ' + state.substring(0, 2).toUpperCase() + ' (' + country.substring(0, 2).toUpperCase() + ')';
+      document.getElementById('cardInstitution').innerText = inst;
+      document.getElementById('cardTrack').innerText = track.split('(')[0].trim();
+
+      // Update Charter Doc Preview
+      document.getElementById('docCandidateName').innerText = name;
+      document.getElementById('docCredentialBadge').innerText = fullCredentialString;
+      document.getElementById('docHash').innerText = getFormattedHash(name + fullCredentialString);
+
+      // Update Discord Button
+      const discordBtn = document.getElementById('discordGuildLink');
+      if (discordBtn) {
+        discordBtn.innerHTML = `
+          <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24"><path d="M20.317 4.37a19.791 19.791 0 0 0-4.885-1.515.074.074 0 0 0-.079.037c-.21.375-.444.864-.608 1.25a18.27 18.27 0 0 0-5.487 0 12.64 12.64 0 0 0-.617-1.25.077.077 0 0 0-.079-.037A19.736 19.736 0 0 0 3.677 4.37a.07.07 0 0 0-.032.027C.533 9.046-.32 13.58.099 18.057a.082.082 0 0 0 .031.057 19.9 19.9 0 0 0 5.993 3.03.078.078 0 0 0 .084-.028c.462-.63.874-1.295 1.226-1.994.021-.041.001-.09-.041-.106a13.107 13.107 0 0 1-1.872-.892.077.077 0 0 1-.008-.128 10.2 10.2 0 0 0 .372-.292.074.074 0 0 1 .077-.01c3.929 1.793 8.18 1.793 12.061 0a.074.074 0 0 1 .078.01c.12.098.246.198.373.292a.077.077 0 0 1-.006.127 12.299 12.299 0 0 1-1.873.894.077.077 0 0 0-.041.107c.36.698.772 1.362 1.225 1.993a.076.076 0 0 0 .084.028 19.839 19.839 0 0 0 6.002-3.03.077.077 0 0 0 .032-.054c.5-5.177-.838-9.674-3.549-13.66a.061.061 0 0 0-.031-.028zM8.02 15.33c-1.183 0-2.157-1.085-2.157-2.419 0-1.333.956-2.419 2.157-2.419 1.21 0 2.176 1.096 2.157 2.42 0 1.333-.956 2.418-2.157 2.418zm7.975 0c-1.183 0-2.157-1.085-2.157-2.419 0-1.333.955-2.419 2.157-2.419 1.21 0 2.176 1.096 2.157 2.42 0 1.333-.946 2.418-2.157 2.418z"/></svg>
+          <span>Authorize &amp; Join Discord Guild (${fullCredentialString})</span>
+        `;
+      }
+    }
+
+    // Attach real-time keyup/change listeners
+    const inputs = ['inputName', 'inputAge', 'inputOccupation', 'inputCountry', 'inputState', 'inputDistrict', 'inputInstitution', 'inputTrack'];
+    inputs.forEach(id => {
+      const el = document.getElementById(id);
+      if (el) {
+        el.addEventListener('input', updateLivePreview);
+        el.addEventListener('change', updateLivePreview);
+      }
+    });
+
+    // Generate action triggered on submit
+    window.generateAndVerifyPass = function() {
+      currentIdNumber = Math.floor(10000 + Math.random() * 90000);
+      fullCredentialString = 'DEV-' + currentIdNumber;
+      
+      updateLivePreview();
+
+      const log = document.getElementById('dynamicLog');
+      const time = document.getElementById('logTimestamp');
+      const now = new Date();
+      if (time) time.innerText = 'UTC: ' + now.toISOString().replace('T', ' ').substring(0, 19);
+
+      if (log) {
+        log.innerHTML = `<span class="text-secondary font-bold">&gt; TRANSMISSION VERIFIED: Pass ID [${fullCredentialString}] cryptographically stamped by Node #01 (Churu). Telemetry broadcasted.</span>`;
+      }
+
+      const statusBadge = document.getElementById('docStatusBadge');
+      if (statusBadge) {
+        statusBadge.className = 'px-2 py-0.5 rounded font-label-code-sm text-[0.6875rem] bg-secondary text-surface-container-lowest font-black animate-pulse';
+        statusBadge.innerText = 'CERTIFICATE SIGNED';
+        setTimeout(() => {
+          statusBadge.className = 'px-2 py-0.5 rounded font-label-code-sm text-[0.6875rem] bg-secondary/15 text-secondary font-bold';
+          statusBadge.innerText = 'READY TO EXPORT';
+        }, 3000);
+      }
+    };
+
+    window.copyCredentialId = function() {
+      if (navigator.clipboard) {
+        navigator.clipboard.writeText(fullCredentialString);
+        const btnText = document.getElementById('copyBtnText');
+        if (btnText) {
+          const original = btnText.innerText;
+          btnText.innerText = 'Copied: ' + fullCredentialString;
+          setTimeout(() => { btnText.innerText = original; }, 2000);
+        }
+      }
+    };
+
+    window.downloadCharterDoc = function() {
+      const name = document.getElementById('inputName').value.trim() || 'Aayush Sarowa';
+      const inst = document.getElementById('inputInstitution').value.trim() || 'PM Shri KV Churu';
+      const text = `==========================================================\n` +
+                   `dEVELoPE CLUB // OFFICIAL FELLOWSHIP CHARTER PROTOCOL\n` +
+                   `==========================================================\n\n` +
+                   `CANDIDATE ID: ${fullCredentialString}\n` +
+                   `MEMBER NAME:  ${name}\n` +
+                   `INSTITUTION:  ${inst}\n` +
+                   `STATUS:       VERIFIED JUNIOR SYSTEMS FELLOW\n` +
+                   `FOUNDER:      Aayush Sarowa (Lead Architect, Age 12)\n` +
+                   `CHAPTER:      PM Shri Kendriya Vidyalaya Churu Node\n` +
+                   `SECURITY SIG: SHA256-${getFormattedHash(name + fullCredentialString)}\n\n` +
+                   `"Build from first principles. Ship open code. Mentor unconditionally."\n` +
+                   `==========================================================`;
+      
+      const blob = new Blob([text], { type: 'text/plain' });
+      const url = URL.createObjectURL(blob);
+      const a = document.createElement('a');
+      a.href = url;
+      a.download = `dEVELoPE_Charter_${fullCredentialString}.txt`;
+      document.body.appendChild(a);
+      a.click();
+      document.body.removeChild(a);
+      URL.revokeObjectURL(url);
+    };
+
+    // Initial pass rendering
+    updateLivePreview();
+  })();
+</script></main><footer class="w-full bg-surface-container-lowest shadow-[0_1px_8px_rgba(0,0,0,0.04)] py-space-2xl mt-space-3xl border-t border-surface-container-high/40"><div class="max-w-[80rem] mx-auto px-margin md:px-margin-md lg:px-margin-lg"><div class="flex flex-col md:flex-row items-start md:items-center justify-between gap-space-lg pb-space-xl"><div class="flex items-center gap-space-md"><span class="flex h-3 w-3 relative"><span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-secondary opacity-75"></span><span class="relative inline-flex rounded-full h-3 w-3 bg-secondary"></span></span><span class="font-label-tech text-label-tech text-on-surface-variant">All Systems Operational <span class="text-outline">//</span> Available for select roles &amp; collaborations</span></div><div class="flex items-center gap-space-lg"><a class="font-label-tech text-label-tech text-on-surface-variant hover:text-secondary transition-colors" href="https://github.com" rel="noreferrer" target="_blank">GitHub</a><a class="font-label-tech text-label-tech text-on-surface-variant hover:text-secondary transition-colors" href="https://linkedin.com" rel="noreferrer" target="_blank">LinkedIn</a><a class="font-label-tech text-label-tech text-on-surface-variant hover:text-secondary transition-colors" href="https://x.com" rel="noreferrer" target="_blank">X / Twitter</a><a class="font-label-tech text-label-tech text-on-surface-variant hover:text-secondary transition-colors" href="https://read.cv" rel="noreferrer" target="_blank">Read.cv</a></div></div><div class="pt-space-lg flex flex-col sm:flex-row items-center justify-between gap-space-md border-t border-surface-variant/30"><p class="font-body-sm text-body-sm text-outline">© 2025 Aayush Sarowa &amp; dEVELoPE Club. Engineered with mathematical precision &amp; cybernetic clarity.</p><div class="flex items-center gap-space-xs font-label-code-sm text-label-code-sm text-outline"><span class="text-primary">LOC:</span> 28.6139° N, 77.2090° E <span class="text-outline">//</span> <span class="text-secondary">REV:</span> 4.8.2-PROD</div></div></div></footer></body></html>

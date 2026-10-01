@@ -1,0 +1,650 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_standard" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=JetBrains+Mono:wght@400;500;600&amp;family=Plus+Jakarta+Sans:wght@600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{colors:{"on-secondary-fixed":"#001f26","surface-container":"#1c1f29","tertiary-container":"#4d8eff","secondary-fixed-dim":"#4cd7f6","surface-variant":"#31353f","on-tertiary-container":"#00285d","primary-fixed-dim":"#d0bcff","inverse-surface":"#dfe2ef","on-tertiary":"#002e6a","on-secondary":"#003640","on-error-container":"#ffdad6","on-primary-fixed":"#23005c","on-primary-fixed-variant":"#5516be","on-tertiary-fixed":"#001a42","primary-fixed":"#e9ddff","outline":"#958ea0","surface-dim":"#0f131c","surface-container-highest":"#31353f","surface-bright":"#353943","outline-variant":"#494454","secondary-fixed":"#acedff","on-tertiary-fixed-variant":"#004395","surface-container-low":"#181b25","surface-container-lowest":"#0a0e17","tertiary-fixed":"#d8e2ff","surface-container-high":"#262a34","secondary":"#4cd7f6","primary-container":"#a078ff","error-container":"#93000a","surface":"#0f131c","tertiary":"#adc6ff","on-primary-container":"#340080","inverse-on-surface":"#2c303a","secondary-container":"#03b5d3","on-primary":"#3c0091","tertiary-fixed-dim":"#adc6ff","error":"#ffb4ab","on-background":"#dfe2ef","on-error":"#690005","primary":"#d0bcff","surface-tint":"#d0bcff","inverse-primary":"#6d3bd7","on-secondary-fixed-variant":"#004e5c","on-surface-variant":"#cbc3d7","background":"#0f131c","on-surface":"#dfe2ef","on-secondary-container":"#00424e"},borderRadius:{"DEFAULT":"0.25rem","lg":"0.5rem","xl":"0.75rem","full":"9999px"},spacing:{"gutter-lg":"2.5rem","margin":"1rem","margin-lg":"4rem","margin-md":"2.5rem","space-sm":"0.5rem","space-lg":"1.5rem","gutter":"1.5rem","space-xl":"2.5rem","space-3xl":"6rem","space-2xl":"4rem","space-md":"1rem","space-xs":"0.25rem"},fontFamily:{"display-hero":["Plus Jakarta Sans"],"headline-lg":["Plus Jakarta Sans"],"display-hero-mobile":["Plus Jakarta Sans"],"body-lg":["Inter"],"headline-lg-mobile":["Plus Jakarta Sans"],"label-tech":["JetBrains Mono"],"headline-md":["Plus Jakarta Sans"],"headline-sm":["Plus Jakarta Sans"],"body-sm":["Inter"],"label-code-sm":["JetBrains Mono"],"body-md":["Inter"]},fontSize:{"display-hero":["4.5rem",{lineHeight:"1.05",letterSpacing:"-0.04em",fontWeight:"800"}],"headline-lg":["3rem",{lineHeight:"1.15",letterSpacing:"-0.03em",fontWeight:"700"}],"display-hero-mobile":["2.75rem",{lineHeight:"1.1",letterSpacing:"-0.03em",fontWeight:"800"}],"body-lg":["1.125rem",{lineHeight:"1.6",letterSpacing:"-0.01em",fontWeight:"400"}],"headline-lg-mobile":["2rem",{lineHeight:"1.2",letterSpacing:"-0.02em",fontWeight:"700"}],"label-tech":["0.8125rem",{lineHeight:"1.4",letterSpacing:"0.04em",fontWeight:"500"}],"headline-md":["2rem",{lineHeight:"1.25",letterSpacing:"-0.02em",fontWeight:"600"}],"headline-sm":["1.375rem",{lineHeight:"1.35",letterSpacing:"-0.01em",fontWeight:"600"}],"body-sm":["0.875rem",{lineHeight:"1.5",letterSpacing:"0em",fontWeight:"400"}],"label-code-sm":["0.75rem",{lineHeight:"1.3",letterSpacing:"0.06em",fontWeight:"500"}],"body-md":["1rem",{lineHeight:"1.55",letterSpacing:"0em",fontWeight:"400"}]}}}};</script></head><body class="bg-surface font-body-md text-on-surface antialiased selection:bg-primary selection:text-on-primary min-h-screen flex flex-col justify-between"><header class="fixed top-0 left-0 right-0 z-50 bg-surface-container-lowest/80 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="h-20 max-w-[80rem] mx-auto px-margin md:px-margin-md lg:px-margin-lg flex items-center justify-between"><div class="flex items-center gap-space-md"><a class="flex items-center gap-space-sm group" data-path="home" href="#"><img alt="Brand logo. - Primary color: #8b5cf6
+- Font: plusJakartaSans
+- Mode: dark
+- Roundness: rounded-md
+" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1UznnYgs4lhMoeQWLJGOg5118MJLCV91qe6kpExoi1RhXi4ljlC6lKOmGvLnAtqg3kQDyY-fmcbRfbbwZJU7WYgoPomMW5JwGgYAaEFcLEK6qQe_82u1hdFRohXPTDUmEL-VFIac1yEEngDQyeZPCdZPiMmg04UtDr3uwgQz0-I8jHUwVOqe1etcAYsE-nOBuuNT40tYKVf5s-PeONi7xtGnaJT6_7ONwoT47CVxysBbssvCv_O49XB8a4"/><div class="flex flex-col"><span class="font-headline-sm text-headline-sm text-on-surface font-bold tracking-tight leading-none group-hover:text-primary transition-colors">Aayush Sarowa</span><span class="font-label-code-sm text-label-code-sm text-secondary tracking-widest uppercase mt-space-xs">Systems &amp; Architecture</span></div></a></div><nav class="hidden lg:flex items-center gap-space-xs bg-surface-container-lowest/60 p-1.5 rounded-xl" data-active-classes="bg-surface-container-high text-primary font-semibold rounded-lg shadow-[0_0_20px_-4px_rgba(139,92,246,0.35)]"><a class="px-space-md py-space-sm text-on-surface-variant font-body-sm text-body-sm hover:text-on-surface hover:bg-surface-container-high transition-all rounded-lg" data-path="home" href="#">Home</a><a class="px-space-md py-space-sm text-on-surface-variant font-body-sm text-body-sm hover:text-on-surface hover:bg-surface-container-high transition-all rounded-lg" data-path="about" href="#">About</a><a class="px-space-md py-space-sm text-on-surface-variant font-body-sm text-body-sm hover:text-on-surface hover:bg-surface-container-high transition-all rounded-lg" data-path="skills" href="#">Skills</a><a class="px-space-md py-space-sm text-on-surface-variant font-body-sm text-body-sm hover:text-on-surface hover:bg-surface-container-high transition-all rounded-lg" data-path="projects" href="#">Projects</a><a class="px-space-md py-space-sm text-on-surface-variant font-body-sm text-body-sm hover:text-on-surface hover:bg-surface-container-high transition-all rounded-lg" data-path="hobbies" href="#">Hobbies</a><a class="px-space-md py-space-sm text-on-surface-variant font-body-sm text-body-sm hover:text-on-surface hover:bg-surface-container-high transition-all rounded-lg" data-path="contact" href="#">Contact</a></nav><div class="flex items-center gap-space-md"><a class="hidden sm:inline-flex items-center gap-space-xs px-space-lg py-2.5 rounded-lg bg-primary-container/20 text-on-surface font-headline-sm text-body-sm font-semibold shadow-[0_0_20px_-4px_rgba(139,92,246,0.4)] hover:bg-primary-container/30 hover:shadow-[0_0_30px_0px_rgba(6,182,212,0.5)] hover:-translate-y-0.5 transition-all" data-path="contact" href="#"><span class="w-2 h-2 rounded-full bg-secondary animate-pulse"></span>Let's Connect</a><div class="w-8 h-8 rounded-full overflow-hidden border border-outline-variant bg-surface-container-high flex items-center justify-center"><img alt="Aayush Sarowa Avatar" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida/AEtjO1WVJ860U-e_a0q70tG6i3-c8mK5Xg5-H7o1m06kZ-K02kK5yYF9xK800w=w1200"/></div></div></div></header><main class="w-full pt-20 bg-surface flex-1"><div class="flex flex-col w-full relative">
+<!-- Ambient Atmospheric Backdrops -->
+<div class="absolute top-10 left-1/2 -translate-x-1/2 w-[70rem] h-[30rem] bg-gradient-to-b from-primary/10 via-secondary/5 to-transparent blur-3xl pointer-events-none -z-10"></div>
+<div class="absolute top-[60rem] right-0 w-[45rem] h-[45rem] bg-secondary/5 blur-[120px] pointer-events-none -z-10"></div>
+<div class="absolute top-[130rem] left-0 w-[45rem] h-[45rem] bg-primary/5 blur-[120px] pointer-events-none -z-10"></div>
+<!-- Hero Section -->
+<section class="max-w-[80rem] mx-auto w-full px-margin md:px-margin-md lg:px-margin-lg pt-space-xl pb-space-2xl">
+<div class="flex flex-col items-start gap-space-md">
+<!-- Section Index Badge -->
+<div class="inline-flex items-center gap-space-sm px-3 py-1 rounded-full bg-primary/10 text-primary font-label-code-sm text-label-code-sm tracking-wider uppercase shadow-[0_0_16px_rgba(208,188,255,0.15)]">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary animate-ping"></span>
+        // 05 // PASSIONS &amp; PURSUITS
+      </div>
+<!-- Title & Split Layout -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-space-xl w-full items-end mt-space-xs">
+<div class="lg:col-span-8 flex flex-col gap-space-sm">
+<h1 class="font-display-hero text-headline-lg lg:text-display-hero text-on-surface tracking-tight leading-[1.05]">
+            Beyond the Terminal: <span class="bg-gradient-to-r from-primary via-tertiary to-secondary bg-clip-text text-transparent">Hobbies &amp; Creative Pursuits</span>
+</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-3xl pt-space-xs">
+            Balancing high-performance systems engineering with active sports, artistic creation, and analytical inquiry. Every line of code is anchored in the kinetic instincts of athletics and the rigor of mathematics.
+          </p>
+</div>
+<!-- Student Meta Pill -->
+<div class="lg:col-span-4 flex flex-col gap-space-xs p-space-md rounded-xl bg-surface-container-low shadow-sm">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-secondary text-sm">school</span>
+<span class="font-label-tech text-label-tech text-secondary uppercase tracking-widest">Scholar Dossier</span>
+</div>
+<div class="font-headline-sm text-headline-sm text-on-surface">Aayush Sarowa</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+            12 Years Old • Class 7th • PM Shri Kendriya Vidyalaya, Churu
+          </p>
+<div class="font-label-code-sm text-label-code-sm text-outline mt-space-xs flex items-center gap-2">
+<span class="w-2 h-2 rounded-full bg-secondary"></span>
+            DOB: 10.02.2014 // Churu, Rajasthan
+          </div>
+</div>
+</div>
+<!-- Telemetry Strip / Metrics Bar -->
+<div class="w-full mt-space-lg p-space-md rounded-xl bg-surface-container-lowest shadow-md grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-space-md">
+<div class="flex flex-col">
+<span class="font-label-code-sm text-label-code-sm text-outline uppercase tracking-wider">Active Fields</span>
+<span class="font-headline-sm text-headline-sm text-primary font-bold mt-1">6 Disciplines</span>
+<span class="font-body-sm text-label-tech text-on-surface-variant">Physical &amp; Intellectual</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-code-sm text-label-code-sm text-outline uppercase tracking-wider">Engine Analysis</span>
+<span class="font-headline-sm text-headline-sm text-secondary font-bold mt-1">100+ Games</span>
+<span class="font-body-sm text-label-tech text-on-surface-variant">Sicilian &amp; Ruy Lopez</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-code-sm text-label-code-sm text-outline uppercase tracking-wider">Field Role</span>
+<span class="font-headline-sm text-headline-sm text-on-surface font-bold mt-1">Top-Order Bat</span>
+<span class="font-body-sm text-label-tech text-on-surface-variant">Weekend KV Squad</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-code-sm text-label-code-sm text-outline uppercase tracking-wider">Visual Medium</span>
+<span class="font-headline-sm text-headline-sm text-tertiary font-bold mt-1">Acrylic &amp; Ink</span>
+<span class="font-body-sm text-label-tech text-on-surface-variant">Cybernetic Landscapes</span>
+</div>
+<div class="flex flex-col col-span-2 md:col-span-1">
+<span class="font-label-code-sm text-label-code-sm text-outline uppercase tracking-wider">Math Engine</span>
+<span class="font-headline-sm text-headline-sm text-secondary-fixed-dim font-bold mt-1">Infinite</span>
+<span class="font-body-sm text-label-tech text-on-surface-variant">Combinatorics &amp; Proofs</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Profile Spotlight Card -->
+<section class="max-w-[80rem] mx-auto w-full px-margin md:px-margin-md lg:px-margin-lg pb-space-2xl">
+<div class="rounded-xl bg-gradient-to-r from-surface-container-low via-surface-container to-surface-container-low p-space-lg lg:p-space-xl shadow-xl flex flex-col lg:flex-row items-center gap-space-xl">
+<div class="relative group shrink-0">
+<div class="absolute -inset-1 rounded-2xl bg-gradient-to-tr from-primary via-secondary to-tertiary opacity-40 blur-lg group-hover:opacity-75 transition-opacity duration-500"></div>
+<div class="relative w-44 h-44 sm:w-52 sm:h-52 rounded-xl overflow-hidden bg-surface-container-highest shadow-md">
+<img alt="Aayush Sarowa Portrait" class="w-full h-full object-cover grayscale contrast-125 group-hover:grayscale-0 transition-all duration-700" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDgOIOmAHVkYCKyPb73zCUrd6yoIINMpqHQ_25gyJ2OPuVNK42j-5MBjrnYBo6XtjMoMXSPAFpyAyLsH-MrTKBZyO_vKdnMA8ndTlJwJy1RY7JKWENyzK20ntWcdUv5xW8F4ek1nytesS3LJqHw_ElZA5Q2CE-ZC3VqVLpiBur1uETxsNN6GSG5StCX_iDbdnNWWWhzEBEVboEWyenaxMJTdfwZpkPSDG9beFUrLGI-zoZ6DHnGSdkRBLMdapuvO0RLLzo"/>
+</div>
+<div class="absolute bottom-2 right-2 px-2 py-0.5 rounded bg-surface-container-lowest/90 font-label-code-sm text-label-code-sm text-secondary shadow-sm">
+          #KV-7TH
+        </div>
+</div>
+<div class="flex flex-col gap-space-sm flex-1">
+<div class="flex flex-wrap items-center gap-space-sm">
+<span class="px-2.5 py-0.5 rounded-full bg-secondary/10 font-label-code-sm text-label-code-sm text-secondary">STUDENT ATHLETE &amp; CODER</span>
+<span class="font-label-tech text-label-tech text-outline">// CHURU DISTRICT //</span>
+</div>
+<h2 class="font-headline-md text-headline-md text-on-surface font-bold">
+          "The discipline forged on the cricket pitch and the chessboard directly writes the algorithms in my codebase."
+        </h2>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-2xl">
+          Student at PM Shri KV Churu, Builder, and All-Around Enthusiast. Living in Churu, Rajasthan, Aayush explores everything from 22-yard turf strategies to hyper-fast bitwise manipulation in C++ and Go, embodying the balanced polymath archetype from an early age.
+        </p>
+<div class="flex flex-wrap items-center gap-space-md pt-space-xs font-label-tech text-label-tech text-outline">
+<div class="flex items-center gap-1.5 text-on-surface">
+<span class="material-symbols-outlined text-sm text-primary">location_on</span>
+            PM Shri KV Grounds, Churu
+          </div>
+<div class="flex items-center gap-1.5 text-on-surface">
+<span class="material-symbols-outlined text-sm text-secondary">sports_cricket</span>
+            Right-Hand Batsman
+          </div>
+<div class="flex items-center gap-1.5 text-on-surface">
+<span class="material-symbols-outlined text-sm text-tertiary">functions</span>
+            Discrete Geometry
+          </div>
+</div>
+</div>
+</div>
+</section>
+<!-- The 6 Dedicated Hobby Cards: Bento Grid -->
+<section class="max-w-[80rem] mx-auto w-full px-margin md:px-margin-md lg:px-margin-lg pb-space-3xl">
+<div class="flex flex-col md:flex-row items-start md:items-end justify-between gap-space-md mb-space-xl">
+<div>
+<span class="font-label-code-sm text-label-code-sm text-primary tracking-widest uppercase">// CORE SYSTEM INPUTS</span>
+<h2 class="font-headline-lg text-headline-lg text-on-surface font-bold mt-1">The 6 Foundational Passions</h2>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant max-w-md">
+        Deep dives into the activities that sharpen spatial instinct, rapid heuristic calculation, artistic aesthetics, and computational rigor.
+      </p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-space-lg">
+<!-- HOBBY 1: CRICKET -->
+<div class="group relative rounded-xl bg-surface-container p-space-lg flex flex-col justify-between shadow-lg hover:shadow-2xl transition-all duration-300 overflow-hidden">
+<div class="absolute -top-12 -right-12 w-32 h-32 bg-secondary/10 rounded-full blur-2xl group-hover:bg-secondary/20 transition-colors"></div>
+<div class="flex flex-col gap-space-md relative z-10">
+<div class="flex items-center justify-between">
+<div class="w-12 h-12 rounded-lg bg-surface-container-highest flex items-center justify-center text-secondary shadow-sm">
+<span class="material-symbols-outlined text-2xl">sports_cricket</span>
+</div>
+<span class="font-label-code-sm text-label-code-sm text-outline group-hover:text-secondary transition-colors">01 // KINETICS</span>
+</div>
+<div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface font-bold">Cricket &amp; Team Athletics</h3>
+<p class="font-label-tech text-label-tech text-secondary mt-1">Weekend Matches • KV Churu Grounds</p>
+</div>
+<div class="relative w-full h-44 rounded-lg overflow-hidden bg-surface-container-lowest">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="A dynamic cinematic wide-angle shot of a young Indian school cricket batsman executing a precision cover drive on an open sunlit pitch in Rajasthan. Atmospheric desert dust highlights, sharp contrasting shadows, vibrant athletic jersey colors, dusk lighting." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAgypzC72teN8XE8eR32IhSZ-7Eq3PIp5RZkqt68tiVTtVP6wioFqX8ltMpjIFvPjSl8WOcnydaFmbO26SNXMi5lSWiWpOZ-BH53qHFRfeADt9sute6wnOoWmO3olJfw3DosMrykFnGaLj25_IVMpoJ_6gQaZ5JDf4NbEn7HuvHC8AkAEUKLlMSB2Ld2ae0tsCo0ITAqRTw5aKWXnaWbGzky5hpa7db0GLO2b2VP1nNsGWAagWrgsB2gA"/>
+<div class="absolute inset-0 bg-gradient-to-t from-surface-container via-transparent to-transparent"></div>
+<div class="absolute bottom-2 left-2 px-2 py-0.5 rounded bg-surface-container-lowest/80 font-label-code-sm text-label-code-sm text-on-surface">KV Ground • Turf 01</div>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+            A relentless passion for batting precision, timing, and split-second spatial coordination. Analyzing field placements, calculating run rates on the fly, and leading through high-pressure overs builds team communication and resilience.
+          </p>
+<div class="flex flex-wrap gap-1.5 pt-space-xs">
+<span class="px-2 py-0.5 rounded bg-surface-container-highest font-label-code-sm text-label-code-sm text-on-surface-variant">Batting Focus</span>
+<span class="px-2 py-0.5 rounded bg-surface-container-highest font-label-code-sm text-label-code-sm text-on-surface-variant">Field Geometries</span>
+<span class="px-2 py-0.5 rounded bg-surface-container-highest font-label-code-sm text-label-code-sm text-on-surface-variant">Endurance</span>
+</div>
+</div>
+<div class="mt-space-lg pt-space-sm flex items-center justify-between text-outline font-label-code-sm text-label-code-sm">
+<span>FAV FORMAT: T20 &amp; ODI</span>
+<span class="text-secondary flex items-center gap-1"><span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>Active Captaincy</span>
+</div>
+</div>
+<!-- HOBBY 2: CHESS (Flagship connection to GoChess) -->
+<div class="group relative rounded-xl bg-surface-container p-space-lg flex flex-col justify-between shadow-lg hover:shadow-2xl transition-all duration-300 overflow-hidden">
+<div class="absolute -top-12 -right-12 w-32 h-32 bg-primary/10 rounded-full blur-2xl group-hover:bg-primary/20 transition-colors"></div>
+<div class="flex flex-col gap-space-md relative z-10">
+<div class="flex items-center justify-between">
+<div class="w-12 h-12 rounded-lg bg-surface-container-highest flex items-center justify-center text-primary shadow-sm">
+<span class="material-symbols-outlined text-2xl">neurology</span>
+</div>
+<span class="font-label-code-sm text-label-code-sm text-outline group-hover:text-primary transition-colors">02 // TACTICS</span>
+</div>
+<div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface font-bold">Chess &amp; Variant Analysis</h3>
+<p class="font-label-tech text-label-tech text-primary mt-1">Foundation of GoChess 3.8 Pro</p>
+</div>
+<!-- Interactive mini visual: SVG chessboard segment -->
+<div class="relative w-full h-44 rounded-lg overflow-hidden bg-surface-container-lowest p-3 flex flex-col justify-between">
+<div class="flex items-center justify-between font-label-code-sm text-label-code-sm text-outline">
+<span>BOARD REF // E4-C5 SICILIAN</span>
+<span class="text-primary font-bold">VAL: +0.42</span>
+</div>
+<!-- Chessboard graphic representation -->
+<div class="grid grid-cols-8 gap-0.5 w-full h-24 rounded bg-surface-container-high/50 p-1">
+<div class="bg-primary/20 rounded-sm"></div>
+<div class="bg-surface-container-low rounded-sm"></div>
+<div class="bg-primary/20 rounded-sm"></div>
+<div class="bg-surface-container-low rounded-sm"></div>
+<div class="bg-primary/20 rounded-sm flex items-center justify-center text-[10px] text-primary">♞</div>
+<div class="bg-surface-container-low rounded-sm"></div>
+<div class="bg-primary/20 rounded-sm"></div>
+<div class="bg-surface-container-low rounded-sm"></div>
+<div class="bg-surface-container-low rounded-sm"></div>
+<div class="bg-primary/20 rounded-sm"></div>
+<div class="bg-surface-container-low rounded-sm"></div>
+<div class="bg-primary/20 rounded-sm flex items-center justify-center text-[10px] text-secondary">♟</div>
+<div class="bg-surface-container-low rounded-sm"></div>
+<div class="bg-primary/20 rounded-sm"></div>
+<div class="bg-surface-container-low rounded-sm"></div>
+<div class="bg-primary/20 rounded-sm"></div>
+<div class="bg-primary/20 rounded-sm"></div>
+<div class="bg-surface-container-low rounded-sm"></div>
+<div class="bg-primary/20 rounded-sm"></div>
+<div class="bg-surface-container-low rounded-sm"></div>
+<div class="bg-primary/20 rounded-sm"></div>
+<div class="bg-surface-container-low rounded-sm flex items-center justify-center text-[10px] text-primary">♝</div>
+<div class="bg-primary/20 rounded-sm"></div>
+<div class="bg-surface-container-low rounded-sm"></div>
+</div>
+<div class="flex justify-between items-center font-label-code-sm text-[10px] text-on-surface-variant">
+<span>PLY DEPTH: 18</span>
+<span>ALPHA-BETA EVAL</span>
+</div>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+            Tactical foresight, calculating 7 moves ahead, and breaking open Sicilian defenses. This deep analytical passion directly sparked the architecture of his engine GoChess 3.8 Pro with bitboards and transposition tables.
+          </p>
+<div class="flex flex-wrap gap-1.5 pt-space-xs">
+<span class="px-2 py-0.5 rounded bg-surface-container-highest font-label-code-sm text-label-code-sm text-on-surface-variant">Ruy Lopez</span>
+<span class="px-2 py-0.5 rounded bg-surface-container-highest font-label-code-sm text-label-code-sm text-on-surface-variant">Sicilian Najdorf</span>
+<span class="px-2 py-0.5 rounded bg-surface-container-highest font-label-code-sm text-label-code-sm text-on-surface-variant">Bitboard Math</span>
+</div>
+</div>
+<div class="mt-space-lg pt-space-sm flex items-center justify-between text-outline font-label-code-sm text-label-code-sm">
+<span>100+ GAMES LOGGED</span>
+<span class="text-primary flex items-center gap-1"><span class="w-1.5 h-1.5 rounded-full bg-primary"></span>Engine Inspiration</span>
+</div>
+</div>
+<!-- HOBBY 3: PAINTING & VISUAL ARTS -->
+<div class="group relative rounded-xl bg-surface-container p-space-lg flex flex-col justify-between shadow-lg hover:shadow-2xl transition-all duration-300 overflow-hidden">
+<div class="absolute -top-12 -right-12 w-32 h-32 bg-tertiary/10 rounded-full blur-2xl group-hover:bg-tertiary/20 transition-colors"></div>
+<div class="flex flex-col gap-space-md relative z-10">
+<div class="flex items-center justify-between">
+<div class="w-12 h-12 rounded-lg bg-surface-container-highest flex items-center justify-center text-tertiary shadow-sm">
+<span class="material-symbols-outlined text-2xl">palette</span>
+</div>
+<span class="font-label-code-sm text-label-code-sm text-outline group-hover:text-tertiary transition-colors">03 // CANVAS</span>
+</div>
+<div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface font-bold">Painting &amp; Concept Art</h3>
+<p class="font-label-tech text-label-tech text-tertiary mt-1">Acrylic, Watercolors &amp; UI Aesthetics</p>
+</div>
+<div class="relative w-full h-44 rounded-lg overflow-hidden bg-surface-container-lowest">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="A moody, high-contrast acrylic painting of a futuristic neon city skyline reflecting on wet rain surfaces at midnight. Electric violet and cyan brush strokes, abstract architectural shapes, expressive palette knife textures on heavy canvas." src="https://lh3.googleusercontent.com/aida-public/AB6AXuB6MDH7aTnCO29BzFmDn_Z4W9C9biO2fA3S6_YOFZIyt0MJ0GWxZlWmBegfIptHwUGhL3HaXkkhqcrPF2iu_-GI8jbmInuUHS7EZzAgwT8DU8VqP7UvGwGwl3NTUHwa6rx4pxA6Fx-6MnjQT66MNir4Sr3qusCeUjb6wu9kkAmlXQ5kg1Rk4moSnW5PI-6BNE0KnDpfAffDPfgbNOsYuP2h6syo4EjwXvjkk1_Sl9oO0ZRYeoeLb-DI8g"/>
+<div class="absolute inset-0 bg-gradient-to-t from-surface-container via-transparent to-transparent"></div>
+<div class="absolute bottom-2 left-2 px-2 py-0.5 rounded bg-surface-container-lowest/80 font-label-code-sm text-label-code-sm text-on-surface">Acrylic on Paper • 2024</div>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+            Translating thoughts into color harmonies and structural landscapes. Exploring light fields, atmospheric gradients, and geometric perspectives gives Aayush an instinctive eye for spatial balance in digital interface design.
+          </p>
+<div class="flex flex-wrap gap-1.5 pt-space-xs">
+<span class="px-2 py-0.5 rounded bg-surface-container-highest font-label-code-sm text-label-code-sm text-on-surface-variant">Color Theory</span>
+<span class="px-2 py-0.5 rounded bg-surface-container-highest font-label-code-sm text-label-code-sm text-on-surface-variant">Landscapes</span>
+<span class="px-2 py-0.5 rounded bg-surface-container-highest font-label-code-sm text-label-code-sm text-on-surface-variant">Futurism</span>
+</div>
+</div>
+<div class="mt-space-lg pt-space-sm flex items-center justify-between text-outline font-label-code-sm text-label-code-sm">
+<span>MEDIUM: MIXED MEDIA</span>
+<span class="text-tertiary flex items-center gap-1"><span class="w-1.5 h-1.5 rounded-full bg-tertiary"></span>UX Driver</span>
+</div>
+</div>
+<!-- HOBBY 4: FOOTBALL -->
+<div class="group relative rounded-xl bg-surface-container p-space-lg flex flex-col justify-between shadow-lg hover:shadow-2xl transition-all duration-300 overflow-hidden">
+<div class="absolute -top-12 -right-12 w-32 h-32 bg-secondary/10 rounded-full blur-2xl group-hover:bg-secondary/20 transition-colors"></div>
+<div class="flex flex-col gap-space-md relative z-10">
+<div class="flex items-center justify-between">
+<div class="w-12 h-12 rounded-lg bg-surface-container-highest flex items-center justify-center text-secondary shadow-sm">
+<span class="material-symbols-outlined text-2xl">sports_soccer</span>
+</div>
+<span class="font-label-code-sm text-label-code-sm text-outline group-hover:text-secondary transition-colors">04 // KINETICS</span>
+</div>
+<div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface font-bold">Football &amp; Playmaking</h3>
+<p class="font-label-tech text-label-tech text-secondary mt-1">Midfield Control &amp; Spatial Sprinting</p>
+</div>
+<div class="relative w-full h-44 rounded-lg overflow-hidden bg-surface-container-lowest">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="An action shot of young football players on a grass pitch during evening golden hour with long shadows. One young player in midfield jersey controlling a football with high focus, green grass texture, warm backlight flare, cinematic sports photography." src="https://lh3.googleusercontent.com/aida-public/AB6AXuC8NyPoZYpj_I6RzO4jakuM06SC_RMAU7FWnQXRX0ms0Zw2JZeavOvGPKCAiKe1kVnwW8NjrR8GL0CbyUJU0d46L2XGSDWj0qwdkeRyVrDM0HX_jcNrpZ6bcnY6yaMRNW1vJNWN5xEYptHEdRGlsq6Pj92QPqY1khOTbqBlQIIHETF0OgUzZhlqsTkPYBMkmvDwLfSfcmwONZXVQK4saSn79LNDweJTO4MSOF0anSsKpMRVu-koeDJdXg"/>
+<div class="absolute inset-0 bg-gradient-to-t from-surface-container via-transparent to-transparent"></div>
+<div class="absolute bottom-2 left-2 px-2 py-0.5 rounded bg-surface-container-lowest/80 font-label-code-sm text-label-code-sm text-on-surface">Midfield Hub • KV League</div>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+            Rapid decision-making under intense aerobic tempo. Playing through the center teaches predictive passing corridors, ball deceleration mechanics, and reading opponent trajectories before the pass is executed.
+          </p>
+<div class="flex flex-wrap gap-1.5 pt-space-xs">
+<span class="px-2 py-0.5 rounded bg-surface-container-highest font-label-code-sm text-label-code-sm text-on-surface-variant">Midfield Vision</span>
+<span class="px-2 py-0.5 rounded bg-surface-container-highest font-label-code-sm text-label-code-sm text-on-surface-variant">Interval Stamina</span>
+<span class="px-2 py-0.5 rounded bg-surface-container-highest font-label-code-sm text-label-code-sm text-on-surface-variant">Quick Feints</span>
+</div>
+</div>
+<div class="mt-space-lg pt-space-sm flex items-center justify-between text-outline font-label-code-sm text-label-code-sm">
+<span>ROLE: CENTRAL PLAYMAKER</span>
+<span class="text-secondary flex items-center gap-1"><span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>High Agility</span>
+</div>
+</div>
+<!-- HOBBY 5: READING & RESEARCH -->
+<div class="group relative rounded-xl bg-surface-container p-space-lg flex flex-col justify-between shadow-lg hover:shadow-2xl transition-all duration-300 overflow-hidden">
+<div class="absolute -top-12 -right-12 w-32 h-32 bg-primary/10 rounded-full blur-2xl group-hover:bg-primary/20 transition-colors"></div>
+<div class="flex flex-col gap-space-md relative z-10">
+<div class="flex items-center justify-between">
+<div class="w-12 h-12 rounded-lg bg-surface-container-highest flex items-center justify-center text-primary shadow-sm">
+<span class="material-symbols-outlined text-2xl">menu_book</span>
+</div>
+<span class="font-label-code-sm text-label-code-sm text-outline group-hover:text-primary transition-colors">05 // INTELLECT</span>
+</div>
+<div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface font-bold">Voracious Reading</h3>
+<p class="font-label-tech text-label-tech text-primary mt-1">Sci-Fi, Astrophysics &amp; Computing Lore</p>
+</div>
+<div class="relative w-full h-44 rounded-lg overflow-hidden bg-surface-container-lowest p-space-md flex flex-col justify-between">
+<div class="flex items-center gap-2 text-primary font-label-code-sm text-label-code-sm">
+<span class="material-symbols-outlined text-sm">auto_stories</span>
+<span>CURRENT READING LOG</span>
+</div>
+<div class="space-y-1.5">
+<div class="p-1.5 rounded bg-surface-container-high/60 text-xs font-body-sm text-on-surface flex justify-between items-center">
+<span>The Master Algorithm // Domingos</span>
+<span class="text-secondary font-label-code-sm text-[10px]">COMPLETED</span>
+</div>
+<div class="p-1.5 rounded bg-surface-container-high/60 text-xs font-body-sm text-on-surface flex justify-between items-center">
+<span>Cosmos // Carl Sagan</span>
+<span class="text-primary font-label-code-sm text-[10px]">READING</span>
+</div>
+<div class="p-1.5 rounded bg-surface-container-high/60 text-xs font-body-sm text-on-surface flex justify-between items-center">
+<span>Feynman's Lectures on Physics</span>
+<span class="text-outline font-label-code-sm text-[10px]">QUEUED</span>
+</div>
+</div>
+<div class="font-label-code-sm text-[10px] text-outline flex items-center justify-between">
+<span>LATERAL PROBLEM SOLVING</span>
+<span>30+ TITLES/YR</span>
+</div>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+            Immersing into the mechanics of deep space, history of pioneering inventors (Turing, von Neumann, Shannon), and speculative fiction feeds imaginative lateral reasoning required for building next-generation software systems.
+          </p>
+<div class="flex flex-wrap gap-1.5 pt-space-xs">
+<span class="px-2 py-0.5 rounded bg-surface-container-highest font-label-code-sm text-label-code-sm text-on-surface-variant">Theoretical Physics</span>
+<span class="px-2 py-0.5 rounded bg-surface-container-highest font-label-code-sm text-label-code-sm text-on-surface-variant">Biographies</span>
+<span class="px-2 py-0.5 rounded bg-surface-container-highest font-label-code-sm text-label-code-sm text-on-surface-variant">Philosophy of Tech</span>
+</div>
+</div>
+<div class="mt-space-lg pt-space-sm flex items-center justify-between text-outline font-label-code-sm text-label-code-sm">
+<span>LIBRARY: KV CHURU &amp; KINDLE</span>
+<span class="text-primary flex items-center gap-1"><span class="w-1.5 h-1.5 rounded-full bg-primary"></span>Expanding Horizons</span>
+</div>
+</div>
+<!-- HOBBY 6: MATHEMATICS -->
+<div class="group relative rounded-xl bg-surface-container p-space-lg flex flex-col justify-between shadow-lg hover:shadow-2xl transition-all duration-300 overflow-hidden">
+<div class="absolute -top-12 -right-12 w-32 h-32 bg-secondary/10 rounded-full blur-2xl group-hover:bg-secondary/20 transition-colors"></div>
+<div class="flex flex-col gap-space-md relative z-10">
+<div class="flex items-center justify-between">
+<div class="w-12 h-12 rounded-lg bg-surface-container-highest flex items-center justify-center text-secondary shadow-sm">
+<span class="material-symbols-outlined text-2xl">functions</span>
+</div>
+<span class="font-label-code-sm text-label-code-sm text-outline group-hover:text-secondary transition-colors">06 // LOGIC</span>
+</div>
+<div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface font-bold">Discrete Mathematics</h3>
+<p class="font-label-tech text-label-tech text-secondary mt-1">Number Theory &amp; Algorithmic Proofs</p>
+</div>
+<!-- Mathematical formula container -->
+<div class="relative w-full h-44 rounded-lg overflow-hidden bg-surface-container-lowest p-space-md flex flex-col justify-between font-label-code-sm">
+<div class="text-outline text-xs flex items-center justify-between">
+<span>// RECURRENCE &amp; COMBINATORICS</span>
+<span class="text-secondary text-sm">∑ &amp; ∏</span>
+</div>
+<div class="space-y-1 text-xs">
+<div class="text-primary font-mono tracking-wide">f(n) = f(n-1) + f(n-2) mod 2⁶⁴</div>
+<div class="text-on-surface-variant font-mono text-[11px]">∀ v ∈ V : deg(v) = 2 · |E| / |V|</div>
+<div class="text-secondary font-mono text-[11px]">Bitboards: BB &amp;= BB - 1 (Popcount)</div>
+</div>
+<div class="flex justify-between items-center text-[10px] text-outline">
+<span>ALGORITHMIC VERIFICATION</span>
+<span class="text-secondary">O(log N) COMPLEXITY</span>
+</div>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+            Mental math calculations, combinatorics, modular arithmetic, and geometric proofs. Math is not just schoolwork for Aayush—it is the underlying computational engine powering bitwise operators and game tree searching.
+          </p>
+<div class="flex flex-wrap gap-1.5 pt-space-xs">
+<span class="px-2 py-0.5 rounded bg-surface-container-highest font-label-code-sm text-label-code-sm text-on-surface-variant">Mental Math</span>
+<span class="px-2 py-0.5 rounded bg-surface-container-highest font-label-code-sm text-label-code-sm text-on-surface-variant">Modular Arithmetic</span>
+<span class="px-2 py-0.5 rounded bg-surface-container-highest font-label-code-sm text-label-code-sm text-on-surface-variant">Combinatorics</span>
+</div>
+</div>
+<div class="mt-space-lg pt-space-sm flex items-center justify-between text-outline font-label-code-sm text-label-code-sm">
+<span>RIGOR: FORMAL PROOFS</span>
+<span class="text-secondary flex items-center gap-1"><span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>Core Engine</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Interactive Day in the Life / Activity Splitter -->
+<section class="max-w-[80rem] mx-auto w-full px-margin md:px-margin-md lg:px-margin-lg pb-space-3xl">
+<div class="p-space-lg lg:p-space-xl rounded-xl bg-surface-container-low shadow-xl flex flex-col gap-space-lg">
+<div class="flex flex-col md:flex-row md:items-center justify-between gap-space-sm">
+<div>
+<span class="font-label-code-sm text-label-code-sm text-secondary uppercase tracking-widest">// HARMONIC EQUILIBRIUM</span>
+<h3 class="font-headline-md text-headline-md text-on-surface font-bold mt-1">24-Hour Energy Matrix: Scholar &amp; Creator</h3>
+</div>
+<div class="font-label-tech text-label-tech text-outline">
+          School Hours: 07:30 - 13:45 IST • PM Shri KV Churu
+        </div>
+</div>
+<!-- Segmented Interactive-looking Day Chart -->
+<div class="grid grid-cols-1 md:grid-cols-4 gap-space-md">
+<div class="p-space-md rounded-lg bg-surface-container flex flex-col gap-space-xs">
+<div class="flex items-center justify-between text-outline font-label-code-sm text-label-code-sm">
+<span>MORNING PHASE</span>
+<span class="text-secondary">06:00 - 07:15</span>
+</div>
+<div class="font-headline-sm text-headline-sm text-on-surface">Physical Priming</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Morning athletic warm-up, agility footwork drills, and rapid mental math calculation sets before school departure.</p>
+</div>
+<div class="p-space-md rounded-lg bg-surface-container flex flex-col gap-space-xs">
+<div class="flex items-center justify-between text-outline font-label-code-sm text-label-code-sm">
+<span>AFTERNOON</span>
+<span class="text-primary">14:30 - 16:30</span>
+</div>
+<div class="font-headline-sm text-headline-sm text-on-surface">Canvas &amp; Deep Read</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Acrylic painting studies, watercolor sketches, and literature immersion across cosmology and tech history.</p>
+</div>
+<div class="p-space-md rounded-lg bg-surface-container flex flex-col gap-space-xs">
+<div class="flex items-center justify-between text-outline font-label-code-sm text-label-code-sm">
+<span>LATE AFTERNOON</span>
+<span class="text-secondary">16:45 - 18:30</span>
+</div>
+<div class="font-headline-sm text-headline-sm text-on-surface">Pitch Athletics</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Cricket net sessions, turf batting practice, or competitive midfield playmaking on KV Churu sports grounds.</p>
+</div>
+<div class="p-space-md rounded-lg bg-surface-container flex flex-col gap-space-xs">
+<div class="flex items-center justify-between text-outline font-label-code-sm text-label-code-sm">
+<span>EVENING SESSION</span>
+<span class="text-tertiary">19:30 - 21:30</span>
+</div>
+<div class="font-headline-sm text-headline-sm text-on-surface">Chess &amp; Code Lab</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Chess variant calculations, Go / C++ backend engineering, testing heuristic branch evaluations for GoChess.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- "How Hobbies Fuel My Engineering" Synergy Matrix -->
+<section class="max-w-[80rem] mx-auto w-full px-margin md:px-margin-md lg:px-margin-lg pb-space-3xl">
+<div class="text-center max-w-3xl mx-auto mb-space-2xl">
+<div class="inline-flex items-center gap-space-xs px-3 py-1 rounded-full bg-secondary/10 font-label-code-sm text-label-code-sm text-secondary uppercase tracking-widest mb-space-xs">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>
+        COGNITIVE TRANSFER ARCHITECTURE
+      </div>
+<h2 class="font-headline-lg text-headline-lg text-on-surface font-bold">
+        How Hobbies Fuel My Engineering
+      </h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant mt-space-xs">
+        System engineering is not isolated to IDEs. Real algorithmic excellence borrows instincts from sports strategy, graphic balance, and algebraic precision.
+      </p>
+</div>
+<!-- 3-Column Matrix Cards -->
+<div class="grid grid-cols-1 lg:grid-cols-3 gap-space-lg">
+<!-- COLUMN 1: Spatial & Tactical Thinking -->
+<div class="rounded-xl bg-surface-container p-space-lg flex flex-col justify-between shadow-lg relative overflow-hidden group">
+<div class="flex flex-col gap-space-md">
+<div class="flex items-center justify-between">
+<span class="font-label-code-sm text-label-code-sm text-secondary tracking-widest uppercase">PILLAR 01 // TACTICS</span>
+<span class="material-symbols-outlined text-secondary">alt_route</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface font-bold">
+            Spatial &amp; Tactical Thinking
+          </h3>
+<div class="p-space-sm rounded-lg bg-surface-container-lowest font-label-code-sm text-label-code-sm flex items-center justify-between text-on-surface-variant">
+<span class="text-secondary font-semibold">Inputs:</span>
+<span>Chess Tactics + Football Pitch Midfield</span>
+</div>
+<div class="space-y-space-sm text-body-sm font-body-sm text-on-surface-variant">
+<p>
+              In chess, you calculate tree variants with branch-pruning heuristics. In midfield football, you scan 360-degree passing lanes while under sprint pressure.
+            </p>
+<p>
+<strong class="text-on-surface font-medium">Direct Engineering Transfer:</strong> Translated directly into low-latency engine search algorithms, microservice event-routing, and minimax trees in GoChess 3.8 Pro.
+            </p>
+</div>
+</div>
+<div class="mt-space-lg pt-space-md border-t-0 bg-surface-container-high/40 p-space-sm rounded-lg flex items-center justify-between font-label-code-sm text-xs">
+<span class="text-outline">METRIC IMPACT</span>
+<span class="text-secondary font-bold">120K Nodes/Sec Search</span>
+</div>
+</div>
+<!-- COLUMN 2: Patience & Creative Aesthetic -->
+<div class="rounded-xl bg-surface-container p-space-lg flex flex-col justify-between shadow-lg relative overflow-hidden group">
+<div class="flex flex-col gap-space-md">
+<div class="flex items-center justify-between">
+<span class="font-label-code-sm text-label-code-sm text-primary tracking-widest uppercase">PILLAR 02 // INTUITION</span>
+<span class="material-symbols-outlined text-primary">brush</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface font-bold">
+            Patience &amp; Creative Aesthetic
+          </h3>
+<div class="p-space-sm rounded-lg bg-surface-container-lowest font-label-code-sm text-label-code-sm flex items-center justify-between text-on-surface-variant">
+<span class="text-primary font-semibold">Inputs:</span>
+<span>Acrylic Painting + Sci-Fi Literature</span>
+</div>
+<div class="space-y-space-sm text-body-sm font-body-sm text-on-surface-variant">
+<p>
+              Applying layered glazes with acrylics requires deliberate pacing and an intuitive grasp of how foreground and background planes interact visually.
+            </p>
+<p>
+<strong class="text-on-surface font-medium">Direct Engineering Transfer:</strong> Informs the Cyber Luminary UI/UX design language—subtle refractive card borders, balanced visual typography scales, and high-clarity telemetry dashboards.
+            </p>
+</div>
+</div>
+<div class="mt-space-lg pt-space-md border-t-0 bg-surface-container-high/40 p-space-sm rounded-lg flex items-center justify-between font-label-code-sm text-xs">
+<span class="text-outline">METRIC IMPACT</span>
+<span class="text-primary font-bold">100% Bespoke Styling</span>
+</div>
+</div>
+<!-- COLUMN 3: Discipline & Quantitative Rigor -->
+<div class="rounded-xl bg-surface-container p-space-lg flex flex-col justify-between shadow-lg relative overflow-hidden group">
+<div class="flex flex-col gap-space-md">
+<div class="flex items-center justify-between">
+<span class="font-label-code-sm text-label-code-sm text-tertiary tracking-widest uppercase">PILLAR 03 // RIGOR</span>
+<span class="material-symbols-outlined text-tertiary">verified</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface font-bold">
+            Discipline &amp; Quantitative Rigor
+          </h3>
+<div class="p-space-sm rounded-lg bg-surface-container-lowest font-label-code-sm text-label-code-sm flex items-center justify-between text-on-surface-variant">
+<span class="text-tertiary font-semibold">Inputs:</span>
+<span>Cricket Conditioning + Number Theory</span>
+</div>
+<div class="space-y-space-sm text-body-sm font-body-sm text-on-surface-variant">
+<p>
+              Facing 80 km/h deliveries demands steady footing, total concentration, and physical discipline. Mathematical proofs demand zero margin for flawed logic.
+            </p>
+<p>
+<strong class="text-on-surface font-medium">Direct Engineering Transfer:</strong> Uncompromising dedication to clean architectural code, automated benchmarking tests, zero memory leak allocations, and structured Git commits.
+            </p>
+</div>
+</div>
+<div class="mt-space-lg pt-space-md border-t-0 bg-surface-container-high/40 p-space-sm rounded-lg flex items-center justify-between font-label-code-sm text-xs">
+<span class="text-outline">METRIC IMPACT</span>
+<span class="text-tertiary font-bold">0 Memory Leaks Tolerated</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Interactive Mini Chess Puzzle / Tactical Micro-Interaction -->
+<section class="max-w-[80rem] mx-auto w-full px-margin md:px-margin-md lg:px-margin-lg pb-space-3xl">
+<div class="rounded-xl bg-surface-container-lowest p-space-lg lg:p-space-xl shadow-xl flex flex-col lg:flex-row items-center justify-between gap-space-xl">
+<div class="flex flex-col gap-space-sm max-w-xl">
+<div class="inline-flex items-center gap-space-xs font-label-code-sm text-label-code-sm text-primary">
+<span class="material-symbols-outlined text-sm">casino</span>
+<span>QUICK TACTICAL CHALLENGE</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-on-surface font-bold">
+          Aayush's Favorite Tactical Pattern
+        </h3>
+<p class="font-body-md text-body-md text-on-surface-variant">
+          "In both chess and system design, the sharpest solution is rarely the most brute-force move—it's the deflection sacrifice that overloads the opponent's defensive structure."
+        </p>
+<div class="p-space-md rounded-lg bg-surface-container font-label-code-sm text-label-code-sm text-secondary flex items-center justify-between">
+<span>WHITE TO MOVE // FIND THE DEFLECTION</span>
+<button class="px-3 py-1 rounded bg-secondary/10 hover:bg-secondary/20 text-secondary transition-colors cursor-pointer" id="puzzle-hint-btn">
+            Reveal Heuristic
+          </button>
+</div>
+<div class="hidden text-xs font-label-tech text-on-surface-variant p-space-sm rounded bg-surface-container-high" id="puzzle-hint-output">
+          💡 Solution: 1. Qh7+!! Kxh7 2. Rh3# — Greek Gift motif translated to code: sacrifice redundant buffers to unlock instant parallel GPU concurrency!
+        </div>
+</div>
+<!-- Compact Graphic representation -->
+<div class="shrink-0 p-space-md rounded-xl bg-surface-container-high flex flex-col items-center gap-space-sm">
+<div class="flex items-center justify-between w-full font-label-code-sm text-label-code-sm text-outline">
+<span>TACTIC ID: #CHURU-7</span>
+<span class="text-secondary">RATING: 1850</span>
+</div>
+<!-- 4x4 Mini Tactical Board -->
+<div class="grid grid-cols-4 gap-1 p-2 rounded bg-surface-container-lowest">
+<div class="w-12 h-12 rounded bg-surface-container flex items-center justify-center text-xl text-on-surface">♚</div>
+<div class="w-12 h-12 rounded bg-primary/20 flex items-center justify-center text-xl text-on-surface-variant">.</div>
+<div class="w-12 h-12 rounded bg-surface-container flex items-center justify-center text-xl text-secondary">♟</div>
+<div class="w-12 h-12 rounded bg-primary/20 flex items-center justify-center text-xl text-primary">♕</div>
+<div class="w-12 h-12 rounded bg-primary/20 flex items-center justify-center text-xl text-on-surface-variant">.</div>
+<div class="w-12 h-12 rounded bg-surface-container flex items-center justify-center text-xl text-on-surface-variant">.</div>
+<div class="w-12 h-12 rounded bg-primary/20 flex items-center justify-center text-xl text-primary">♘</div>
+<div class="w-12 h-12 rounded bg-surface-container flex items-center justify-center text-xl text-on-surface-variant">.</div>
+<div class="w-12 h-12 rounded bg-surface-container flex items-center justify-center text-xl text-on-surface-variant">.</div>
+<div class="w-12 h-12 rounded bg-primary/20 flex items-center justify-center text-xl text-on-surface-variant">.</div>
+<div class="w-12 h-12 rounded bg-surface-container flex items-center justify-center text-xl text-on-surface-variant">.</div>
+<div class="w-12 h-12 rounded bg-primary/20 flex items-center justify-center text-xl text-secondary">♖</div>
+<div class="w-12 h-12 rounded bg-primary/20 flex items-center justify-center text-xl text-on-surface">♔</div>
+<div class="w-12 h-12 rounded bg-surface-container flex items-center justify-center text-xl text-on-surface-variant">.</div>
+<div class="w-12 h-12 rounded bg-primary/20 flex items-center justify-center text-xl text-on-surface-variant">.</div>
+<div class="w-12 h-12 rounded bg-surface-container flex items-center justify-center text-xl text-on-surface-variant">.</div>
+</div>
+<span class="font-label-code-sm text-[11px] text-outline">Simulated in GoChess 3.8 Pro</span>
+</div>
+</div>
+</section>
+<!-- Call To Action Banner -->
+<section class="max-w-[80rem] mx-auto w-full px-margin md:px-margin-md lg:px-margin-lg pb-space-3xl">
+<div class="relative rounded-2xl bg-gradient-to-r from-primary-container/20 via-surface-container-high to-secondary-container/20 p-space-xl lg:p-space-2xl shadow-2xl overflow-hidden text-center flex flex-col items-center gap-space-lg">
+<div class="absolute -top-24 left-1/2 -translate-x-1/2 w-96 h-96 bg-primary/10 rounded-full blur-3xl pointer-events-none"></div>
+<div class="inline-flex items-center gap-space-xs px-3 py-1 rounded-full bg-surface-container-lowest/80 text-secondary font-label-code-sm text-label-code-sm uppercase tracking-wider">
+<span class="w-2 h-2 rounded-full bg-secondary animate-pulse"></span>
+        OPEN FOR CHALLENGES &amp; SYNERGY
+      </div>
+<div class="max-w-2xl flex flex-col gap-space-xs">
+<h2 class="font-headline-lg text-headline-lg text-on-surface font-extrabold tracking-tight">
+          Interested in a Chess Match, Collaborative Project, or Tech Talk?
+        </h2>
+<p class="font-body-md text-body-md text-on-surface-variant">
+          Whether you want to play a 5-minute blitz match, talk about compiler optimizations, or brainstorm UI aesthetics, Aayush is always curious to connect.
+        </p>
+</div>
+<!-- Action Buttons -->
+<div class="flex flex-col sm:flex-row items-center gap-space-md mt-space-sm z-10">
+<a class="inline-flex items-center justify-center gap-space-xs px-space-xl py-3.5 rounded-lg bg-primary-container text-on-primary-container font-headline-sm text-body-sm font-semibold shadow-[0_0_30px_-5px_rgba(208,188,255,0.4)] hover:shadow-[0_0_40px_0px_rgba(76,215,246,0.6)] hover:-translate-y-0.5 transition-all" data-path="contact" href="#">
+<span class="material-symbols-outlined text-lg">swords</span>
+          Challenge on Chess / Connect
+        </a>
+<a class="inline-flex items-center justify-center gap-space-xs px-space-xl py-3.5 rounded-lg bg-surface-container-highest/80 hover:bg-surface-container-highest text-on-surface font-headline-sm text-body-sm font-semibold transition-all hover:-translate-y-0.5 shadow-sm" data-path="projects" href="#">
+<span class="material-symbols-outlined text-lg">code</span>
+          Explore Engineering Projects
+        </a>
+</div>
+<div class="font-label-code-sm text-label-code-sm text-outline flex items-center gap-space-md pt-space-xs">
+<span>LOC: CHURU (RAJASTHAN)</span>
+<span>•</span>
+<span>CLASS 7TH</span>
+<span>•</span>
+<span class="text-secondary">ALL SYSTEMS LIVE</span>
+</div>
+</div>
+</section>
+<!-- Micro-script for tactical hint interactive element -->
+<script>
+    (function() {
+      const hintBtn = document.getElementById('puzzle-hint-btn');
+      const hintOutput = document.getElementById('puzzle-hint-output');
+      if (hintBtn && hintOutput) {
+        hintBtn.addEventListener('click', function() {
+          hintOutput.classList.toggle('hidden');
+          if (hintOutput.classList.contains('hidden')) {
+            hintBtn.textContent = 'Reveal Heuristic';
+          } else {
+            hintBtn.textContent = 'Hide Heuristic';
+          }
+        });
+      }
+    })();
+  </script>
+</div></main><footer class="w-full bg-surface-container-lowest shadow-[0_1px_8px_rgba(0,0,0,0.04)] py-space-2xl mt-space-3xl"><div class="max-w-[80rem] mx-auto px-margin md:px-margin-md lg:px-margin-lg"><div class="flex flex-col md:flex-row items-start md:items-center justify-between gap-space-lg pb-space-xl"><div class="flex items-center gap-space-md"><span class="flex h-3 w-3 relative"><span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-secondary opacity-75"></span><span class="relative inline-flex rounded-full h-3 w-3 bg-secondary"></span></span><span class="font-label-tech text-label-tech text-on-surface-variant">All Systems Operational <span class="text-outline">//</span> Available for select roles &amp; collaborations</span></div><div class="flex flex-wrap items-center gap-space-md lg:gap-space-lg"><a class="font-label-tech text-label-tech text-on-surface-variant hover:text-secondary transition-colors" data-path="hobbies" href="#">Hobbies</a><a class="font-label-tech text-label-tech text-on-surface-variant hover:text-secondary transition-colors" href="https://github.com" rel="noreferrer" target="_blank">GitHub</a><a class="font-label-tech text-label-tech text-on-surface-variant hover:text-secondary transition-colors" href="https://linkedin.com" rel="noreferrer" target="_blank">LinkedIn</a><a class="font-label-tech text-label-tech text-on-surface-variant hover:text-secondary transition-colors" href="https://x.com" rel="noreferrer" target="_blank">X / Twitter</a><a class="font-label-tech text-label-tech text-on-surface-variant hover:text-secondary transition-colors" href="https://read.cv" rel="noreferrer" target="_blank">Read.cv</a></div></div><div class="pt-space-lg flex flex-col sm:flex-row items-center justify-between gap-space-md"><p class="font-body-sm text-body-sm text-outline">© 2025 Aayush Sarowa. Engineered with mathematical precision &amp; cybernetic clarity.</p><div class="flex items-center gap-space-xs font-label-code-sm text-label-code-sm text-outline"><span class="text-primary">LOC:</span> 28.6139° N, 77.2090° E <span class="text-outline">//</span> <span class="text-secondary">REV:</span> 4.8.2-PROD</div></div></div></footer></body></html>
